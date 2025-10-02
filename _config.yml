@@ -14,12 +14,12 @@
 theme: jekyll-agency
 
 url    : "https://jakehamilton.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/jake-hamilton-portolio" # the subpath of your site, e.g. /blog
 
-title      : Your Awesome Website
-email      : your-email@example.com #this is also the email contact forms will go to
+title      : Jake Hamilton Portfolio
+email      : jhamilton@olin.edu #this is also the email contact forms will go to
 description: "Site description"
-author     : Your Name
+author     : Jake Hamilton
 # logo:     #optional, defaults to site title
   # path: assets\img\clients\creative-market.jpg
   # height: 60 #height in px, defaults to 52px
