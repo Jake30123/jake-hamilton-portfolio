@@ -1,19 +1,22 @@
 ---
 title: Project Threads
 subtitle: subtitle lorem ipsum dolor sit amet consectetur.
-image: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/01-full.jpg
+image: assets\img\white\white.jpg
 alt: Shirts on a hanger
 
 caption:
-  title: Threads
-  subtitle: Illustration
-  thumbnail: https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-agency/master/src/assets/img/portfolio/01-thumbnail.jpg
+  title: City Ripper
+  subtitle: A road ripper that puts most gas bikes to shame. 
+  thumbnail: assets\img\white\white_small.jpg
 ---
-
-Use this area to describe your project. **Markdown** supported. This entry (project1.md) uses links for the image sources. All other projects in the portfolio use local images. Both work just fine! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+*** Side View
+<img src="assets\img\white\white_small.jpg" alt="My Image" width="75%" />
 
 {:.list-inline}
 
-- Date: January 2017
-- Client: Threads
-- Category: Illustration
+- Frame: EEB Enduro
+- Motor: QS 205 + Ferrofluid
+- Battery: 76v 48ah Custom
+- Suspension: DNM USD-8 and DNM Shock
+- Controller: Fardriver ND96530 (330 bus amps, 530 phase)
+- **Total Power: 32,000W**
