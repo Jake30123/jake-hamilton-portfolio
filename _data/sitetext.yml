@@ -37,6 +37,12 @@ en: &DEFAULT_EN
     section: portfolio
     closebutton: "Close Project"
 
+  portfolio2:
+    title: "School Projects"
+    text: "Projects financed by others on business time."
+    section: portfolio2
+    closebutton: "Close Project"
+
   timeline:
     title: "Timeline"
     text: "Lorem ipsum timeline"
@@ -69,9 +75,9 @@ en: &DEFAULT_EN
     end: "Be Part <br> of Our <br> Story!"
 
   about:
-    title: "About Us"
-    text: "our story"
-    body: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde. **Markdown** supported."
+    title: "About Me"
+    text: ""
+    body: "My name is Jake Hamilton and I was born and raised in Washington DC. I am currently studying electrical engineering('28') at Olin College of Engineering in Needham, MA. I have a passion for electric vehicles, batteries, racing, and power electronics. I have a lot of DIY experience between my own projects and running my own business and doing work for customers. I also designed and manufactured circuit boards for Olin Electric Motorsports (Olin's FSAE team)."
     section: about
 
   clients:
