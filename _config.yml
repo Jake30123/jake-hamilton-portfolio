@@ -21,7 +21,7 @@ email      : jhamilton@olin.edu #this is also the email contact forms will go to
 description: "Site description"
 author     : Jake Hamilton
 logo:     #optional, defaults to site title
-  path: assets\img\clients\creative-market.jpg
+  path: assets\img\logo.png
   height: 52 #height in px, defaults to 52px
 
 locale: "en-US" # See available languages in _data/sitetext.yml
@@ -31,7 +31,6 @@ analytics:
 
 collections:
   portfolio:
-
 markdown: kramdown
 
 # Uncomment following line to use Formspree form ID based URL instead of email based URL
