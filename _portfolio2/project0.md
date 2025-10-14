@@ -30,6 +30,8 @@ PCB schematic and layout with the following components: <br>
 ~ Fuses(within 20-25mm from the copper pads)<br>
 ~ Normally open solder points<br>
 
+
+
 ##### Rules 
 EV.6.3.1 All wires and terminals and other conductors used in the Tractive System must be sized for the
 continuous current they will conduct
