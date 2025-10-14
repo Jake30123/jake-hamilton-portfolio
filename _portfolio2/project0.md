@@ -17,18 +17,49 @@ Our FSAE team uses a 102s 4p battery broken up into 6 segments of 17s 4p. Each s
 *Mk6 power board (left) and thermistory board(right).*<br>
 
 ##### Project Requirements
-~ Follow all rules and best practices (listed at bottom) <br>
-~ Combine power and thermistor boards <br>
-~ Fit accumulator segments <br>
-~ Be compatible with the BMS motherboard in relation to connector placement. <br>
+1: Follow all rules and best practices (listed at bottom) <br>
+2: Combine power and thermistor boards <br>
+3: Fit accumulator segments <br>
+4: Be compatible with the BMS motherboard with connector placement. <br>
 
 ##### Project Deliverables 
 PCB schematic and layout with the following components: <br>
-~ Thermistors for temps<br>
-~ Copper strips and traces for voltages<br>
-~ 3xConnectors(20pin) to send the signals to the power board<br>
-~ Fuses(within 20-25mm from the copper pads)<br>
-~ Normally open solder points<br>
+1: Thermistors for temps<br>
+2: Copper strips and traces for voltages<br>
+3: 3xConnectors(20pin) to send the signals to the power board<br>
+4: Fuses(within 20-25mm from the copper pads)<br>
+5: Normally open solder points<br>
+
+##### Design Process
+Before this project I had never designed a PCB before, I had experience with circuits and wiring but never a full PCB. I broke down this problem into three sections:
+1: Mechanical Fit
+2: Electrical Functionality
+3: Design Quality
+
+Above anything I needed my design to fit the accumulator segments, without this fit the board was obsolete. To ensure this fit I got a DXF board outline file from the Accumulator team and we talked over what parts out the outline could be changed and what could not. <br>
+<img src="assets\img\pt\ptv1.png" alt="My Image" width="75%" /><br>
+*The original board outline at the start of the project.*<br><br>
+After maybe an hour of looking at this design I was pretty convinced it would not work terribly well. I would have had to place the thermistors offset from the negative terminal which would have required extensive thermal compound use to thermally connect them to the cells. I went back to the accumulator team and suggested adding little bridges in the middle of the gaps to place the thermistors on. After a quick meeting with our electrical and mechanical leads we decided it was feasible and we came up with a v2 design. <br>
+<img src="assets\img\pt\ptv2.png" alt="My Image" width="75%" /><br>
+*Board outline v2.*<br><br>
+After finalizing the outline I was able to finish my schematic and start placing components. This year, our team was switching away from one thermistor per cell, a configuration that was incredibly bandwidth intensive for data collection. Also, we ended up with a lot of dead thermistors simply because of how many we used. We decided to change to one thermistor for every two cells which was a much simpler design and faster to manufacture. It also made running traces on the board much simpler as I had half as many thermistor traces. By a month into my project I had this first design:<br>
+<img src="assets\img\pt\pt2.png" alt="My Image" width="75%" /><br>
+*V1 board layout.*<br><br>
+This version fit my first two qualifications of mechanical fit and electrical functionality, but lacked design quality. The main feedback I recieved on this design was "more silkscreen!". Some of my traces were also relatively isolated which made them prone to EMI which was especially worrying since a false temperature spike could shut down our car. In response to the feedback I consolidated my traces and added informative silkscreen that identified connector numbers, segment numbers, polarity, and parrallel cell group number. <br>
+<img src="assets\img\pt\pt3.png" alt="My Image" width="75%" /><br>
+*V2 board layout.*<br><br>
+
+##### Manufacturing and Testing
+This board was the final revision and was then sent out for manufacturing. Each project on our electrical team had one owner from start to finish, so after this board came in from JLCPCB it was my duty to populate, test, and integrate it into the car. I had also never SMD soldered prior to this project and it was an incredibly fun learning experience. I fried a couple of LEDs on a test board but after that my technique improved and I was able to fully populate 8 copies of my board (6 for the car, 1 for testing, 1 backup). After populating I then tested all of the boards using our BMS test motherboard.
+<img src="assets\img\pt\pt4.jpg" alt="My Image" width="75%" /><br>
+*BMS test setup powered by a power supply and resistor divider to simulate cells.*<br><br>
+In this process I found a couple dead thermistors and was able to replace them quickly. This process of testing boards taught me how to run test procedures and document them in our file system (Coda). On any prior projects I had just kept mental note of issues but when working on a team it was important that others knew the issues I had found for future design cycles. 
+
+##### Reflection and Future Improvements
+This project taught me all of my KiCad and PCB design basics along with more general circuit knowledge, SMD soldering, and testing procedures. It was an incredibly fun project and really helped me fall extra in love with FSAE. I had an amazing set of mentors that helped me perfect my designs and walk me through the learning process. 
+
+If I had to do board again I would change the connectors we used as they sometimes come a bit loose after large jolts to the car, causing a BMS fault and shutting the car down. I would also change the thermistors we use to be more reliable, right now at room temperature there is a 2-3 degree celcius difference in the thermsitors. This could be corrected with a calibration algorithm but our BMS does not have enough memory or processing power to perform or store these values. A more powerful BMS is an improvement we are making for Mk8 (our next car), so hopefully we can calibrate our thermistors better then. 
+
 
 
 
