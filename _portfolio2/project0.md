@@ -1,66 +1,76 @@
 ---
 caption: #what displays in the portfolio grid:
-  title: Off-Road Super Bike
-  subtitle: An electric off-road motorcycle designed for ultimate performance.
-  thumbnail: assets\img\vortex\vortex_small.jpg
+  title: Power and Thermistor Board
+  subtitle: A custom PCB for measuring cell voltage and temperature. 
+  thumbnail: assets\img\pt\pt1.jpg
   
 #what displays when the item is clicked:
-title: Off-Road Super Bike
-subtitle: An electric off-road motorcycle designed for ultimate performance.
-image: assets\img\vortex\vortex.jpg #main image, can be a link or a file in assets/img/portfolio
+title: Power and Thermistor Board
+subtitle: A custom PCB for measuring cell voltage and temperature. 
+image: assets\img\pt\pt1.jpg #main image, can be a link or a file in assets/img/portfolio
 alt: image alt text
 
 ---
 ### Overview
-This off-road beast was designed to provide ultimate speed and performance offroad. Everything from the knobby dirt-ripping tires to the long wheelbase inspire confidence in the rider while maintaining supreme stability. 
+Our FSAE team uses a 102s 4p battery broken up into 6 segments of 17s 4p. Each segment has its own balancing/monitoring board, data acquisition board, and power and thermistor board. On our previous car, Mk6, the power board and thermistor board were seperate. The power board connected all of the cell groups in series and carried pack current to a REDCUBE connector on each end, and the thermistor board measured each cells temperature. My challenge was to combine them while maintaining rules compliance and functionality.<br>
+<img src="assets\img\pt\mk6.webp" alt="My Image" width="75%" /><br>
+*Mk6 power board (left) and thermistory board(right).*<br>
 
-The active liquid cooling system for the controller allows the rider to push the bike hard all day without overheating. The quad-piston Magura brakes provide incredible stopping power with super high fade resistance aided by 2.3mm thick floating rotors. 
+##### Project Requirements
+~ Follow all rules and best practices (listed at bottom) <br>
+~ Combine power and thermistor boards <br>
+~ Fit accumulator segments <br>
+~ Be compatible with the BMS motherboard in relation to connector placement. <br>
 
-32 KW of power are on tap at all times which can bring this monster from 0-60 in around 4. Overall, the high levels of stability, reliability, and perfomance make this bike an off-road conquerer. 
+##### Project Deliverables 
+PCB schematic and layout with the following components: <br>
+~ Thermistors for temps<br>
+~ Copper strips and traces for voltages<br>
+~ 3xConnectors(20pin) to send the signals to the power board<br>
+~ Fuses(within 20-25mm from the copper pads)<br>
+~ Normally open solder points<br>
 
-###### Specs
-Frame: Vector Vortex<br>
-Motor: Modified QS 205<br>
-Battery: 96v 40AH Custom<br>
-Suspension: DNM USD-8 and DNM Shock<br>
-Controller: Fardriver ND96530 (330 bus amps, 530 phase)<br>
-**Total Power: 32,000W**
+##### Rules 
+EV.6.3.1 All wires and terminals and other conductors used in the Tractive System must be sized for the
+continuous current they will conduct
 
-### Build Process
-This bike is built on an Eleek Positive frame, a frame the Ukranian military uses for their electric motorcycles. I chose this frame for its large battery compartment and center mount motor options (my past bikes had all been hub drives). Since the frame was also built in Ukraine it took three months to arrive. In that time I was able to design and build the battery. 
+EV.7.3.1 A Battery Management System must monitor the Accumulator(s) Voltage EV.7.4 and
+Temperature EV.7.5 when the:
+a. Tractive System is Active EV.11.5
+b. Accumulator is connected to a Charger EV.8.3
 
-##### Battery Build
-I decided early on that I wanted a 96v architecture for the pack for increased efficiency under high load compared to my old 72v designs. The issue I found with 72v was that anything over 20kw would drastically heat up motors and controllers due to the current required. To get even more power I needed to up to 96v as it was a standard for off the shelf BMS'. Another decision I made early on was that I wanted this battery to be incredibly efficient and overbuilt so it could be pushed all day. The first way I implimented this was with custom battery bus bars. <br>
-<img src="assets\img\vortex\busbars.jpg" alt="My Image" width="75%" /><br>
-*A 2d representation of the bus bars for manufacturing.*<br>
+EV.7.4.1 The BMS must measure the cell voltage of each cell
+When single cells are directly connected in parallel, only one voltage measurement is needed
 
-These bus bars were made of 0.3mm copper which resulted in a total voltage drop of 0.2 volts across all 27 bus bars in series. These bus bars also are great for manufacturing purposes as they have ultrasonicly welded nickle tabs that connect to copper so you can spotweld the nickel but benefit from the coppers low resistance (copper is nutoriosuly hard to spot weld).
+EV.7.4.3 All voltage sense wires to the BMS must meet one of:
+a. Have Overcurrent Protection EV.7.4.4 below
+b. Meet requirements for no Overcurrent Protection listed in EV.7.4.5 below
 
-I also decided to go with incredibly powerful but affordable cells so I chose the Samsung 40t for its $3/cell price tag (back in 2023) and 35 amp power rating. This pack all told could output 350 amps at 96v (33,600 watts). 
+EV.7.4.4 When used, Overcurrent Protection for the BMS voltage sense wires must meet the two:
+a. The Overcurrent Protection must occur in the conductor, wire or PCB trace which is
+directly connected to the cell tab.
+b. The voltage rating of the Overcurrent Protection must be equal to or higher than the
+maximum segment voltage
 
-The final piece of the puzzle was the BMS. I opted for an ANT 630 amp peak BMS since it was incredibly overbuilt and had integrated bluetooth capabilities, all for an $100 price tag. 
+EV.7.5.1 The BMS must measure the temperatures of critical points of the Accumulator
 
-<img src="assets\img\vortex\bat1.jpg" alt="My Image" width="49%" /><img src="assets\img\vortex\bat2.jpg" alt="My Image" width="49%" />
-*The bare cells in holders and then with the bus bars spot welded on.*
-<img src="assets\img\vortex\bat4.jpg" alt="My Image" width="75%" /><br>
-*The battery with high current wires done and waiting for the balance leads.*<br>
-<img src="assets\img\vortex\bat5.jpg" alt="My Image" width="49%" /><img src="assets\img\vortex\bat6.jpg" alt="My Image" width="49%" />
-*The battery almost finished and then finished with shrink wrap.*<br>
+EV.7.5.3 Cell temperatures must be measured at the negative terminal of the respective cell
 
-##### Frame Assembly
-After the frame arrived I got straight to work. The battery was the single most complex single component so after it was done other things became easier. The first thing I had to do was assemble all the mechanical components: wheels, motor, suspension, seat, swingarm, handlebars, brakes. After integrating all of these components I added in the battery and wiring and got to work making the wiring harness. <br>
-<img src="assets\img\vortex\assem1.jpg" alt="My Image" width="75%" /><br>
-*A photo with all components integrated waiting for the wiring harness.*<br><br>
-The wiring harness was incredibly tricky to connect as the high current path was two 4 gauge wires for positive and negative which were incredibly hard to bend and move out of the way. I also had a cooling system with a total of 6 half-inch tubes running through the same space as the wiring harness. It ended up being somewhat messy but functional in the end. 
-<img src="assets\img\vortex\final1.jpg" alt="My Image" width="75%" /><br>
-<img src="assets\img\vortex\final2.jpg" alt="My Image" width="75%" /><br>
-*The bike fully assembled.*
+EV.7.5.4 The temperature sensor used must be in direct contact with one of:
+• The negative terminal itself
+• The negative terminal busbar less than 10 mm away from the spot weld or clamping
+source on the negative cell terminal
 
-### Reflection
-This bike was the most intricate, powerful, and cool motorcycle I ever built. It taught me how to design efficient systems to prevent overheating, how to wire with super large and incredibly small wires, and as usual, patience. If I had to re-do this project I would air-cool the controller and mount it externally to preserve room in the battery compartment for cleaner wiring. I would also make it less powerful and lighter. While this bike is incredibly fun to ride you never use all 32kw of power, and when you do its terrifying. And while the bike was only 160lbs if it was lighter it would have been more nimble. Finally, I would have chosen a different motor as the one I chose did not have enough torque at low RPMs and thus was not efficient for low speed hill climbs and other routine off-road maneuvers. 
+EV.7.5.5 For lithium based cells,
+a. The temperature of a minimum of 20% of the cells must be monitored by the BMS
+b. The monitored cells must be equally distributed inside the Accumulator Container(s)
+The temperature of each cell should be monitored
 
-I ended up selling this bike to my schools janitor after going to college as I had no more use for it, but this bike is my pride and joy and still has a place in my heart. 
+EV.7.5.6 Multiple cells may be monitored with one temperature sensor, if EV.7.5 is met for all cells
+sensed by the sensor.
 
-
-
-
+EV.7.5.7 Temperature sensors must have appropriate electrical isolation that meets one of the two:
+• Between the sensor and cell
+• In the sensing circuit
+The isolation must consider GLV/TS isolation as well as common mode voltages between
+sense locations.

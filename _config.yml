@@ -31,6 +31,7 @@ analytics:
 
 collections:
   portfolio:
+  portfolio2:
 markdown: kramdown
 
 # Uncomment following line to use Formspree form ID based URL instead of email based URL

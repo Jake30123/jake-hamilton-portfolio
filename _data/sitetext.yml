@@ -38,8 +38,8 @@ en: &DEFAULT_EN
     closebutton: "Close Project"
 
   portfolio2:
-    title: "School Projects"
-    text: "Projects financed by others on business time."
+    title: "FSAE Projects"
+    text: "Projects for Olin Electric Motorsports."
     section: portfolio2
     closebutton: "Close Project"
 
