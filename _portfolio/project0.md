@@ -24,6 +24,7 @@ Motor: Modified QS 205<br>
 Battery: 96v 40AH Custom<br>
 Suspension: DNM USD-8 and DNM Shock<br>
 Controller: Fardriver ND96530 (330 bus amps, 530 phase)<br>
+Top Speed: 90 mph
 **Total Power: 32,000W**
 
 ### Build Process
@@ -51,7 +52,7 @@ The final piece of the puzzle was the BMS. I opted for an ANT 630 amp peak BMS s
 After the frame arrived I got straight to work. The battery was the single most complex single component so after it was done other things became easier. The first thing I had to do was assemble all the mechanical components: wheels, motor, suspension, seat, swingarm, handlebars, brakes. After integrating all of these components I added in the battery and wiring and got to work making the wiring harness. <br>
 <img src="assets\img\vortex\assem1.jpg" alt="My Image" width="75%" /><br>
 *A photo with all components integrated waiting for the wiring harness.*<br><br>
-The wiring harness was incredibly tricky to connect as the high current path was two 4 gauge wires for positive and negative which were incredibly hard to bend and move out of the way. I also had a cooling system with a total of 6 half-inch tubes running through the same space as the wiring harness. It ended up being somewhat messy but functional in the end. 
+The wiring harness was incredibly tricky to connect as the high current path was two 4 gauge wires for positive and negative which were incredibly hard to bend and move out of the way. I also had a cooling system with a total of 6 half-inch tubes running through the same space as the wiring harness. It ended up being somewhat messy but functional in the end.<br> 
 <img src="assets\img\vortex\final1.jpg" alt="My Image" width="75%" /><br>
 <img src="assets\img\vortex\final2.jpg" alt="My Image" width="75%" /><br>
 *The bike fully assembled.*

@@ -13,9 +13,9 @@ en: &DEFAULT_EN
   nav:
     - title: "About"
       section: about
-    - title: "My Work"
+    - title: "Personal Projects"
       section: portfolio
-    - title: "Business Projects"
+    - title: "FSAE Projects"
       section: portfolio2
     - title: "Contact"
       section: contact

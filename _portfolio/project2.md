@@ -54,7 +54,26 @@ Originally, for the controller I went for a Sabvoton SVMC 72200, like on the cit
 ##### Motor Integration
 Integrating an aftermarket motor made with Chinese manufacturing standards into 28 year old Japanese ATV was really hard. The biggest challange I faced was making a spline adapter that went between the motors output shaft to the rear diffirentials input shaft. 
 
-I made 4 different adapter designs before I found the perfect fit for the splines. 
+I made 4 different adapter designs before I found the perfect fit for the splines. I made the first three adapters to try and fit the motor to a 90 degree gearbox and have the motor transversly mounted, but I could never get the gears meshed correctly. I then switched to having the motor mounted inline with the driveshaft which worked much better. 
+<img src="assets\img\atv\spv1.png" alt="My Image" width="49%" /> <img src="assets\img\atv\spv2.png" alt="My Image" width="49%" /> 
+*Spline adapter v1 (left) and spline adapter v4 (right).*<br>
+<img src="assets\img\atv\inline2.jpg" alt="My Image" width="75%" /> <br>
+*The motor mounted with adapter v4 and final mounts.*<br>
+As a small side note, I ordered the final adapter just as tarrifs on Chinese goods hit which forced me to change manufacturers and the quality of the final product was not as good as I hoped. The tolerances on the motor spline were slightly off which led to 1.5 hours of hand filing to get the right fit. 
+
+##### Final Assembly
+After mounting the motor and final spline adapter, I was able to finish up all of the wiring and put the plastic panels back on. During my final wiring I realized my 12v converter was too small. The headlights alone drew 12 amps and the converter could only supply 10 amps, so I had to do some re-wiring but nothing major. <br>
+<img src="assets\img\atv\controls.jpg" alt="My Image" width="75%" /> <br>
+*Control panel and voltage display with light switch, revers, and 2 speed modes.*<br>
+<img src="assets\img\atv\final1.jpg" alt="My Image" width="75%" /> <br>
+*Me tweaking the battery mounting of the almost finished ATV.*<br>
+
+I have yet to do the final painting or battery mounting but the ATV is now rideable and my mom absolutely loved it. 
+
+##### Reflection
+This project came with some of my biggest setbacks except for the bike that caught fire. It took almost a year and a half from start to finish due to everything from laziness to tarrifs. It really pushed my limits of designing for manufacuring and my engineering knowledge in general. I failed many times with the gearbox and my spline adapters, but I always made another version. And seeing how happy my mom was with the final product made it worth all the trouble. The final ATV was quiet enough to have a normal conversation while riding and fast enough to pull a wheelie when necessary. It could go through foot deep mud and up rutted hills without complaint. While this project did have many of my biggest failures, it was nevertheless and incredible succes. 
+
+
 
 
 
