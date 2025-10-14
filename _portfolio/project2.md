@@ -79,7 +79,7 @@ After mounting the motor and final spline adapter, I was able to finish up all t
 <img src="assets/img/atv/final1.jpg" alt="Me adjusting the battery mounting on the nearly complete ATV" width="75%" /><br>
 *Me tweaking the battery mounting on the almost-finished ATV.*
 
-I have yet to do the final painting or battery mounting, but the ATV is now rideable, and my mom absolutely loved it.
+I have yet to do the final painting or battery mounting, but the ATV is now rideable, and my mom absolutely loves it.
 
 #### Reflection
 This project came with some of my biggest setbacks, except for the bike that caught fire. It took almost a year and a half from start to finish due to everything from laziness to tariffs. It really pushed my limits of designing for manufacturing and my engineering knowledge in general. I failed many times with the gearbox and my spline adapters, but I always made another version.
