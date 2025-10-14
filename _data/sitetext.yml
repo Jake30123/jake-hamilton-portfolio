@@ -12,7 +12,7 @@
 en: &DEFAULT_EN
   header:
     title: Welcome!
-    text: Jake Hamilton Portfolio
+    text: Jake Hamilton's Portfolio
     button: View Projects
     buttonlink: "#portfolio"
 
@@ -77,7 +77,7 @@ en: &DEFAULT_EN
   about:
     title: "About Me"
     text: ""
-    body: "My name is Jake Hamilton and I was born and raised in Washington DC. I am currently studying electrical engineering('28') at Olin College of Engineering in Needham, MA. I have a passion for electric vehicles, batteries, racing, and power electronics. I have a lot of DIY experience between my own projects and running my own business and doing work for customers. I also designed and manufactured circuit boards for Olin Electric Motorsports (Olin's FSAE team)."
+    body: "I am an Electrical Engineering student (Class of 2028) at Olin College of Engineering with a focused passion for electric vehicles, battery technology, and power electronics. Originally from Washington D.C., I combine my academic pursuits with extensive hands-on experience. My practical skills have been honed through numerous personal DIY projects, running my own business, and designing and manufacturing custom printed circuit boards for the Olin Electric Motorsports (FSAE) team, where I am now the project manager. "
     section: about
 
   clients:
