@@ -61,9 +61,7 @@ This project taught me all of my KiCad and PCB design basics along with more gen
 If I had to do board again I would change the connectors we used as they sometimes come a bit loose after large jolts to the car, causing a BMS fault and shutting the car down. I would also change the thermistors we use to be more reliable, right now at room temperature there is a 2-3 degree celcius difference in the thermsitors. This could be corrected with a calibration algorithm but our BMS does not have enough memory or processing power to perform or store these values. A more powerful BMS is an improvement we are making for Mk8 (our next car), so hopefully we can calibrate our thermistors better then. 
 
 
-
-
-##### Rules 
+##### Relevant Rules 
 EV.6.3.1 All wires and terminals and other conductors used in the Tractive System must be sized for the
 continuous current they will conduct
 

@@ -138,3 +138,13 @@
     }
   }
 }
+/* Make code blocks in portfolio modals full-width */
+.portfolio-modal pre {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  /* Optional: Remove rounded corners for a clean edge-to-edge look */
+  border-radius: 0; 
+}
