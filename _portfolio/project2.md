@@ -1,13 +1,13 @@
 ---
 title: Mom-Mobile
 subtitle: An ATV for my mom, who gave me my love of speed. 
-image: assets\img\atv\mom1.png
+image: assets\img\atv\new3.jpeg
 alt: Shirts on a hanger
 
 caption:
   title: Mom-Mobile
   subtitle: An ATV for my mom, who gave me my love of speed. 
-  thumbnail: assets\img\atv\mom1.png
+  thumbnail: assets\img\atv\new3.jpeg
 ---
 ### Overview
 An ATV is a fun, easy-to-ride farm vehicle that even the tamest of riders can feel comfortable on. But what if you want more?
@@ -78,6 +78,9 @@ After mounting the motor and final spline adapter, I was able to finish up all t
 
 <img src="assets/img/atv/final1.jpg" alt="Me adjusting the battery mounting on the nearly complete ATV" width="75%" /><br>
 *Me tweaking the battery mounting on the almost-finished ATV.*
+
+<img src="assets/img/atv/new2.jpeg" alt="Me adjusting the battery mounting on the nearly complete ATV" width="75%" /><br>
+*My mom out for a ride on our farm.*
 
 I have yet to do the final painting or battery mounting, but the ATV is now rideable, and my mom absolutely loves it.
 
