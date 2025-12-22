@@ -25,4 +25,9 @@ I went into the land of high voltage batteries and powerful motors supremely exc
 Then came that fateful morning when I watched as my pride and joy burned to the ground. I’d upgraded the battery with poorly-made cells and they gave out while charging that early morning. 
 <img src="assets/img/blu/bluc.jpg" alt="Charred Blueberry." width="100%" /><br>
 The charred frame of Blueberry still sits in the corner of the garage. I’ve built myself a new bike from scratch, and it’s the perfection I had envisioned (with high quality battery cells!). I paid for it all with my repair business earnings, and I built it with my knowledge, both of which started with Blueberry. This is not the end of the road, however. Blueberry was severely damaged, but not completely broken. I am rebuilding it for my dad. The only parts of old Blueberry that will physically remain are the frame and the front wheel. But the bike will still be Blueberry. It is still built on the spirit of perseverance, it is still teaching me new things, and it is still that little bike that got me started two years ago and changed my life.
-<img src="assets/img/blu/bluf.jpg" alt="Finished Blueberry." width="100%" /><br>
+<img src="assets/img/blu/bluf.jpg" alt="Finished Blueberry." width="100%" />
+
+**UPDATE** 
+The final, working version of Blueberry is up and running. My dad now uses it to get to work every day. I had to move the battery to a box on the rear since my old 3D-printed battery box that you can see in the image above was not strong enough.
+
+<img src="assets/img/blu/blud.jpg" alt="My dad on blueberry." width="100%" /><br>
