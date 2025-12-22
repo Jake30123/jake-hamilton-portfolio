@@ -1,15 +1,17 @@
-// Styling for the portfolio section
-#portfolio {
-  .portfolio-item {
+// Styling for the portfolio3 section
+#portfolio3 {
+  .portfolio3-item {
     right: 0;
     margin: 0 0 15px;
-    .portfolio-link {
+
+    .portfolio3-link {
       position: relative;
       display: block;
       max-width: 400px;
       margin: 0 auto;
       cursor: pointer;
-      .portfolio-hover {
+
+      .portfolio3-hover {
         position: absolute;
         width: 100%;
         height: 100%;
@@ -18,10 +20,12 @@
         transition: all ease 0.5s;
         opacity: 0;
         background: fade-out($primary, 0.1);
+
         &:hover {
           opacity: 1;
         }
-        .portfolio-hover-content {
+
+        .portfolio3-hover-content {
           font-size: 20px;
           position: absolute;
           top: 50%;
@@ -29,10 +33,12 @@
           height: 20px;
           margin-top: -12px;
           text-align: center;
-          color: white;
+          color: rgb(255, 255, 255);
+
           i {
             margin-top: -12px;
           }
+
           h3,
           h4 {
             margin: 0;
@@ -40,16 +46,19 @@
         }
       }
     }
-    .portfolio-caption {
+
+    .portfolio3-caption {
       max-width: 400px;
       margin: 0 auto;
       padding: 25px;
       text-align: center;
-      background-color: $white;
+      background-color: rgb(220, 219, 219);
+
       h4 {
         margin: 0;
         text-transform: none;
       }
+
       p {
         font-size: 16px;
         font-style: italic;
@@ -58,50 +67,60 @@
       }
     }
   }
+
   * {
     z-index: 2;
   }
 }
+
 @media (min-width: 767px) {
-  #portfolio {
-    .portfolio-item {
+  #portfolio3 {
+    .portfolio3-item {
       margin: 0 0 30px;
     }
   }
 }
 
-.portfolio-modal {
+.portfolio3-modal {
   .modal-dialog {
     margin: 1rem;
     max-width: 100vw;
   }
+
   .modal-content {
     padding: 100px 0;
     text-align: left;
+
     h2 {
       font-size: 3em;
       margin-bottom: 15px;
     }
+
     p {
       margin-bottom: 30px;
     }
+
     p.item-intro {
       font-size: 16px;
       font-style: italic;
       margin: 20px 0 30px;
       @include serif-font;
     }
+
     ul.list-inline {
       margin-top: 0;
       margin-bottom: 30px;
     }
+
     img {
       margin-bottom: 30px;
     }
+
     button {
       cursor: pointer;
     }
   }
+
   .close-modal {
     position: absolute;
     top: 25px;
@@ -110,9 +129,11 @@
     height: 75px;
     cursor: pointer;
     background-color: transparent;
+
     &:hover {
       opacity: 0.3;
     }
+
     .lr {
       /* Safari and Chrome */
       z-index: 1051;
@@ -124,6 +145,7 @@
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
       background-color: $gray-900;
+
       .rl {
         /* Safari and Chrome */
         z-index: 1052;
@@ -138,10 +160,12 @@
     }
   }
 }
-#portfolio.page-section {
+
+#portfolio3.page-section {
   background-color: #f2f3f6 !important;
   /* A dark slate blue */
 }
+
 /* Make code blocks in portfolio modals full-width */
 .portfolio-modal pre {
   width: 100vw;
@@ -150,5 +174,5 @@
   transform: translateX(-50%);
 
   /* Optional: Remove rounded corners for a clean edge-to-edge look */
-  border-radius: 0; 
+  border-radius: 0;
 }

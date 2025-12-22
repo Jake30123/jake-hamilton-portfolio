@@ -17,6 +17,8 @@ en: &DEFAULT_EN
       section: portfolio
     - title: "FSAE Projects"
       section: portfolio2
+    - title: "Other Projects"
+      section: portfolio3
     - title: "Contact"
       section: contact
 

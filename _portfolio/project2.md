@@ -29,7 +29,7 @@ The ATV had humble beginnings as a 1997 Kawasaki Bayou 220 that had seen many be
 <img src="assets/img/atv/pre.jpg" alt="A gold-painted Kawasaki Bayou 220 ATV" width="75%" /><br>
 *The Facebook Marketplace listing photo for the ATV.*
 
-I purchased the ATV, in non-running condition, from Facebook Marketplace for $500. It was rusty, spray-painted an atrocious gold, and was overall a bit sad. Before I could do anything else, I needed to clean it up.
+I purchased the ATV, in non-running condition from Facebook Marketplace for $500. It was rusty, spray-painted an atrocious gold, and was overall a bit sad. Before I could do anything else, I needed to clean it up.
 
 ##### Cleaning and Painting
 I ripped absolutely everything off the ATV. The only thing left at the end was the bare frame. I took a wire brush, detergent, and a garden hose and spent a whole day cleaning all the parts I wanted to re-use.
@@ -60,7 +60,7 @@ Originally, for the controller, I went with a Sabvoton SVMC 72200, like on the C
 ##### Motor Integration
 Integrating an aftermarket motor made with Chinese manufacturing standards into a 28-year-old Japanese ATV was really hard. The biggest challenge I faced was making a spline adapter that went between the motor's output shaft and the rear differential's input shaft.
 
-I created four different adapter designs before I found the perfect fit for the splines. I made the first three adapters to try and fit the motor to a 90-degree gearbox and have the motor transversely mounted, but I could never get the gears to mesh correctly. I then switched to having the motor mounted inline with the driveshaft, which worked much better.
+I created four different adapter designs before I found the perfect fit for the splines. I made the first three adapters to try to fit the motor to a 90-degree gearbox and have the motor transversely mounted, but I could never get the gears to mesh correctly. I then switched to having the motor mounted inline with the driveshaft, which worked much better.
 
 <img src="assets/img/atv/spv1.png" alt="CAD drawing of spline adapter version 1" width="49%" /> <img src="assets/img/atv/spv2.png" alt="CAD drawing of spline adapter version 4" width="49%" />
 *Spline adapter v1 (left) and spline adapter v4 (right).*

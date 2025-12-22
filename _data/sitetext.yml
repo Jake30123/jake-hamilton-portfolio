@@ -43,6 +43,12 @@ en: &DEFAULT_EN
     section: portfolio2
     closebutton: "Close Project"
 
+  portfolio3:
+    title: "Other Projects"
+    text: "Miscellaneous other projects."
+    section: portfolio3
+    closebutton: "Close Project"
+
   timeline:
     title: "Timeline"
     text: "Lorem ipsum timeline"
