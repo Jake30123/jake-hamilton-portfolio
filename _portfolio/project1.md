@@ -24,7 +24,7 @@ It has enough power to keep up with highway traffic for short sprints and enough
 - Total Power: 14,000 W
 
 #### Build Process
-The bones of this bike come from a company called EEB, a Chinese factory that sells frames and components directly to the consumer. This is their "Enduro" frame, which is designed for long-travel suspension, a large battery, and a hub motor. I selected this frame because it was lightweight at only 22 lbs (8 lbs less than the motor alone). EEB is also known for high-quality welds on its frames, good customer support, and a wide range of accessories, along with standardized components for easy off-the-shelf assembly.
+The bones of this bike come from a company called EEB, a Chinese factory that sells frames and components directly to the consumer. This is its "Enduro" frame, which is designed for long-travel suspension, a large battery, and a hub motor. I selected this frame because it was lightweight at only 22 lbs (8 lbs less than the motor alone). EEB is also known for high-quality welds on its frames, good customer support, and a wide range of accessories, along with standardized components for easy off-the-shelf assembly.
 
 To start the build process, I purchased the frame, plastic panels, suspension, wheels, and motor from a variety of suppliers.
 

@@ -47,11 +47,11 @@ I also added a lot of new features that go beyond the original theme's capabilit
 
 The Jekyll structure of this theme includes:
 
-- `_portfolio` files - what generate the portfolio grid. YAML front matter handles all the details
+- `_portfolio` files - which generates the portfolio grid. YAML front matter handles all the details
 - the `page` layout allows custom pages, as seen in the legal and 404 pages
 - `sitetext.yml` enables complete customization of all site text
 - `navigation.yml` enables fully customizable navigation
-- `style.yml` enables fully customizable colors, background images, and other style-related things
+- `style.yml` enables fully customizable colors, background images, and other style-related settings
 
 **If you enjoy this theme, please consider [supporting me](https://www.paypal.me/raviriley) to continue developing and maintaining it.**
 
@@ -158,7 +158,7 @@ Then run:
 $ bundle install
 ```
 
-To test the theme, run this. (Using the `--trace` flag for verbose errors.)
+To test the theme, run the following command. (Using the `--trace` flag for verbose errors.)
 
 ```sh
 $ bundle exec jekyll serve --trace
@@ -168,7 +168,7 @@ Then open your browser at:
 
 - http://localhost:4000
 
-Add pages, documents, data, etc. like normal to test the theme's contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
+Add pages, documents, data, etc. as usual to test the theme's contents. As you make modifications, your site will regenerate and you should see the changes in the browser after a refresh.
 
 ## License
 

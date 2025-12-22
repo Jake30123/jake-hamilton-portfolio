@@ -34,12 +34,12 @@ Our FSAE team uses a 102s4p battery broken up into six segments of 17s4p. Each s
 ##### Design Process
 Before this project, I had never designed a PCB. I had experience with circuits and wiring, but never a full PCB from scratch. I broke down this problem into three sections: Mechanical Fit, Electrical Functionality, and Design Quality.
 
-Above all, my design needed to fit the accumulator segments; without this fit, the board was obsolete. To ensure this, I got a DXF board outline file from the Accumulator team and we discussed which parts of the outline could be changed and which could not.
+Above all, my design needed to fit the accumulator segments; without this fit, the board was obsolete. To ensure this, I got a DXF board outline file from the Accumulator team, and we discussed which parts of the outline could be changed and which could not.
 
 <img src="assets/img/pt/ptv1.png" alt="Version 1 of the PCB board outline CAD drawing" width="75%" /><br>
 *The original board outline at the start of the project.*
 
-After about an hour of looking at this design, I was convinced it would not work well. I would have had to place the thermistors offset from the negative terminal, which would have required extensive use of thermal compound to connect them thermally to the cells. I went back to the Accumulator team and suggested adding small bridges in the middle of the gaps to place the thermistors on. After a quick meeting with our electrical and mechanical leads, we decided it was feasible and came up with a v2 design.
+After about an hour of looking at this design, I was convinced it would not work well. I would have had to place the thermistors offset from the negative terminal, which would have required extensive use of thermal compound to connect them thermally to the cells. I went back to the Accumulator team, and suggested adding small bridges in the middle of the gaps to place the thermistors on. After a quick meeting with our electrical and mechanical leads, we decided it was feasible and came up with a v2 design.
 
 <img src="assets/img/pt/ptv2.png" alt="Version 2 of the PCB board outline with bridges for thermistors" width="75%" /><br>
 *Board outline v2.*
@@ -55,7 +55,7 @@ This version fit my first two qualifications of mechanical fit and electrical fu
 *V2 board layout.*
 
 ##### Manufacturing and Testing
-This board was the final revision and was then sent out for manufacturing. Each project on our electrical team had one owner from start to finish, so after this board came in from JLCPCB, it was my duty to populate, test, and integrate it into the car. I had also never done SMD soldering prior to this project, and it was an incredibly fun learning experience. I fried a couple of LEDs on a test board, but after that, my technique improved and I was able to fully populate eight copies of my board (six for the car, one for testing, one backup).
+This board was the final revision, which was then sent out for manufacturing. Each project on our electrical team had one owner from start to finish, so after this board came in from JLCPCB, it was my duty to populate, test, and integrate it into the car. I had also never done SMD soldering prior to this project, and it was an incredibly fun learning experience. I fried a couple of LEDs on a test board, but after that, my technique improved and I was able to fully populate eight copies of my board (six for the car, one for testing, one backup).
 
 After populating, I tested all of the boards using our BMS test motherboard.
 
@@ -67,7 +67,7 @@ In this process, I found a couple of dead thermistors and was able to replace th
 #### Reflection and Future Improvements
 This project taught me all of my KiCad and PCB design basics, along with more general circuit knowledge, SMD soldering, and testing procedures. It was an incredibly fun project and really helped me fall in love with FSAE. I had an amazing set of mentors who helped me perfect my designs and walked me through the learning process.
 
-If I had to do this board again, I would change the connectors we used, as they sometimes come a bit loose after large jolts to the car, causing a BMS fault and shutting the car down. I would also change the thermistors to be more reliable; right now at room temperature, there is a 2-3 degree Celsius difference between them. This could be corrected with a calibration algorithm, but our team did not have the time to do that this year as we would have needed to get our entire battery to the same exact temperature for multiple temperature points. 
+If I had to do this board again, I would change the connectors we used, as they sometimes come a bit loose after large jolts to the car, causing a BMS fault and shutting the car down. I would also change the thermistors to be more reliable; right now at room temperature, there is a 2-3 degree Celsius difference between them. This could be corrected with a calibration algorithm, but our team did not have the time to do that this year as we would have needed to get our entire battery to the exact same temperature for multiple temperature points. 
 
 #### Relevant FSAE Rules
 - EV.6.3.1: All wires and terminals and other conductors used in the Tractive System must be sized for the continuous current they will conduct.

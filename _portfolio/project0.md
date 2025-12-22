@@ -28,7 +28,7 @@ With 32 kW of power on tap at all times, this monster can go from 0-60 mph in ar
 - Total Power: 32,000 W
 
 #### Build Process
-This bike is built on an Eleek Positive frame, a model the Ukrainian military uses for their electric motorcycles. I chose this frame for its large battery compartment and center-mount motor options (my past bikes were all hub drives). Since the frame was built in and shipped from Ukraine, it took three months to arrive. In that time, I was able to design and build the battery.
+This bike is built on an Eleek Positive frame, a model the Ukrainian military uses for its electric motorcycles. I chose this frame for its large battery compartment and center-mount motor options (my past bikes were all hub drives). Since the frame was built in and shipped from Ukraine, it took three months to arrive. In that time, I was able to design and build the battery.
 
 ##### Battery Build
 I decided early on that I wanted a 96V architecture for the battery pack to increase efficiency under high load compared to my old 72V designs. The issue I found with 72V was that anything over 20 kW would drastically heat up motors and controllers due to the required current. To get more power, I needed to upgrade to 96V, a standard for off-the-shelf Battery Management Systems (BMS).

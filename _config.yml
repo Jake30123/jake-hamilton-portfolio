@@ -32,6 +32,7 @@ analytics:
 collections:
   portfolio:
   portfolio2:
+  portfolio3:
 markdown: kramdown
 kramdown:
   input: GFM
