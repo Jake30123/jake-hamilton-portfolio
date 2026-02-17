@@ -14,7 +14,7 @@ en: &DEFAULT_EN
     title: Welcome!
     text: Jake Hamilton's Portfolio
     button: View Projects
-    buttonlink: "#portfolio"
+    buttonlink: "#portfolio2"
 
   services:
     title: "Services"
