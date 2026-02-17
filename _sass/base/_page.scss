@@ -1,7 +1,13 @@
 // Global styling for this template
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   @include body-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p {
@@ -10,6 +16,7 @@ p {
 
 a {
   color: $primary;
+
   &:hover {
     color: darken($primary, 10%);
   }
@@ -31,11 +38,27 @@ h6 {
 
 .page-section {
   padding: 100px 0;
+
   h2.section-heading {
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: $primary;
+      border-radius: 2px;
+    }
   }
+
   h3.section-subheading {
     font-size: 16px;
     font-weight: 400;
@@ -45,6 +68,7 @@ h6 {
     @include serif-font;
   }
 }
+
 @media (min-width: 768px) {
   section {
     padding: 150px 0;

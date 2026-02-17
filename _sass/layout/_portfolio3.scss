@@ -3,6 +3,11 @@
   .portfolio3-item {
     right: 0;
     margin: 0 0 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+    }
 
     .portfolio3-link {
       position: relative;
@@ -10,6 +15,8 @@
       max-width: 400px;
       margin: 0 auto;
       cursor: pointer;
+      border-radius: 12px 12px 0 0;
+      overflow: hidden;
 
       .portfolio3-hover {
         position: absolute;
@@ -53,6 +60,8 @@
       padding: 25px;
       text-align: center;
       background-color: rgb(220, 219, 219);
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 
       h4 {
         margin: 0;
@@ -90,6 +99,7 @@
   .modal-content {
     padding: 100px 0;
     text-align: left;
+    border-radius: 16px;
 
     h2 {
       font-size: 3em;
