@@ -7,9 +7,16 @@ header.masthead {
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
+
+  // Utilize the portrait image on narrower screens to prevent awkward cropping of the wide panoramic image
+  @media (max-width: 767px) {
+    background-image: url("../img/header.jpg");
+  }
+
   .intro-text {
     padding-top: 150px;
     padding-bottom: 100px;
+
     .intro-lead-in {
       font-size: 22px;
       font-style: italic;
@@ -17,20 +24,23 @@ header.masthead {
       margin-bottom: 25px;
       @include serif-font;
     }
+
     .intro-heading {
-      font-size: 50px;
+      font-size: 40px;
       font-weight: 700;
-      line-height: 50px;
+      line-height: 40px;
       margin-bottom: 25px;
       @include heading-font;
     }
   }
 }
+
 @media (min-width: 768px) {
   header.masthead {
     .intro-text {
-      padding-top: 300px;
-      padding-bottom: 200px;
+      padding-top: 170px;
+      padding-bottom: 120px;
+
       .intro-lead-in {
         font-size: 40px;
         font-style: italic;
@@ -38,6 +48,7 @@ header.masthead {
         margin-bottom: 25px;
         @include serif-font;
       }
+
       .intro-heading {
         font-size: 75px;
         font-weight: 700;
