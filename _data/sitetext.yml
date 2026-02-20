@@ -145,16 +145,7 @@ en: &DEFAULT_EN
     title: "Contact Me"
     text: "Feel free to reach out with any questions!"
     section: contact
-    name: "Name*"
-    name-validation: "Please enter your name."
-    email: "Email*"
-    email-validation: "Please enter your email address."
-    phone: "Phone Number"
-    phone-validation: "Please enter your phone number."
-    message: "Message*"
-    message-validation: "Please enter a message."
-    subject: "Contact Form Submission"
-    submit: "Send Message"
+    button: "Email Me"
 
   footer:
     legal: "Privacy Policy"

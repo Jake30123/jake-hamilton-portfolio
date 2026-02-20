@@ -2,7 +2,7 @@
 title: Mom-Mobile
 subtitle: An ATV for my mom, who gave me my love of speed. 
 image: assets\img\atv\new3.jpeg
-alt: Shirts on a hanger
+alt: An electric ATV conversion built for off-road touring
 
 caption:
   title: Mom-Mobile

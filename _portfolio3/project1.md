@@ -68,7 +68,7 @@ Just as we were figuring out audio, our Raspberry Pi 5 finally arrived. We purch
 
 After flashing a 64 bit version of Debian Trixie, the Raspberry Pi would start to boot, get caught, and start to boot again endlessly. It gave no error code, would not connect to the internet so we could SSH into it and check errors, or give really any consistent signal as to the problem. We eventually identified a weak power supply, wires that were too thin, a slow SD card, and funky network protocols to all be interfering with the boot process. 
 
-After soldering thicker wires to the GPIO pins, setting a static IP and connecting to OLIN-DEVICES, finding a faster SD card, and changing power supplies, the Raspberry Pi booted! This was absolutely huge for our team and happened after over ten hours of fiddling with a supposedly plug and play product. *Note: we did not have the Raspberry Pi official power supply which would have solved some isses.*
+After soldering thicker wires to the GPIO pins, setting a static IP and connecting to OLIN-DEVICES, finding a faster SD card, and changing power supplies, the Raspberry Pi booted! This was absolutely huge for our team and happened after over ten hours of fiddling with a supposedly plug and play product. *Note: we did not have the Raspberry Pi official power supply which would have solved some issues.*
 
 #### Powering the System
 With our base systems set up with the Arduino data communication and Raspberry Pi up and running, we started to integrate the electrical system. We were able to find two buck converters in the electrical stock room that perfectly fit our power requirements and dimensions. 

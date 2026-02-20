@@ -2,7 +2,7 @@
 title: City Ripper
 subtitle: A lightweight electric commuter that puts gas bikes to shame.
 image: assets\img\white\white.jpg
-alt: Shirts on a hanger
+alt: A lightweight white electric commuter motorcycle
 
 caption:
   title: City Ripper

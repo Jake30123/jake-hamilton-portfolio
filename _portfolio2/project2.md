@@ -12,7 +12,7 @@ alt: image alt text
 
 ---
 ### Overview
-In accordance with FSAE rules, each car needs to have a Brake Speed Plausability Device (BSPD). Among many other functions, like calculating throttle travel and brake pressure, it also:
+In accordance with FSAE rules, each car needs to have a Brake Speed Plausibility Device (BSPD). Among many other functions, like calculating throttle travel and brake pressure, it also:
 
 EV.4.7.1 Must monitor for the two conditions:<br>
 • The mechanical brakes are engaged EV.4.6, T.3.2.4<br>
@@ -54,7 +54,7 @@ static bool check_brake(int16_t pos_min) {
             throttle_debug.throttle_brake_implaus = true;
             return true;
         } else if (throttle_debug.throttle_brake_implaus && pos_min >= APPS_BRAKE_IMPLAUSIBILITY_THRESHOLD_LOW){
-            // if there has 
+            // if there has been a previous implausibility and pedal travel is still >= 5%
             return true;
         } else {
             // if brake is pressed and no implausibility
