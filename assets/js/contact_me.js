@@ -10,7 +10,7 @@ $(function() {
     submitSuccess: function($form, event) {
       event.preventDefault(); // prevent default submit behaviour
       // get values from FORM
-	  var url = "https://formspree.io/" + "{% if site.formspree_form_path %}{{ site.formspree_form_path }}{% else %}{{ site.email }}{% endif %}";
+      var url = $form.attr("action") || "https://formspree.io/" + "{% if site.formspree_form_path %}{{ site.formspree_form_path }}{% endif %}";
       var name = $("input#name").val();
       var username = $("input#username").val();
       var email = $("input#email").val();
