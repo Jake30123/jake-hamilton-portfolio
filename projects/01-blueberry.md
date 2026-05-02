@@ -28,7 +28,7 @@ Blueberry and I had a good six months together. Blueberry happily chugged along 
 
 Then I got the upgrade bug. It started when a key component in the battery failed and I had to fully tear down the bike to fix it. Looking at all the parts made me realize I could make this one bigger, make that just a bit better. And so, I did.
 
-![Me working on Blueberry](assets/img/blu/blu2.jpg)
+![Me working on Blueberry](assets/img/blu/blutwo.jpg)
 *Me working on Blueberry.*
 
 I went into the land of high voltage batteries and powerful motors supremely excited but with a lack of caution. This manifested when I blew up my first motor controller (the brain that tells the motor how fast to go), and the next, and then the next ones were poor quality since I did not know what to look for, and lo and behold they sparked and died too. Finally, on try number five, I was successful. I had re-wired the bike two, if not three, times and had upgraded a plethora of other components, so Frankenblueberry was doing quite well—except for not having a brain. But controller/brain number five got me up and running and I was overjoyed. My ideal vision for Blueberry was getting closer, and for another 9 months, I rode and modified. I also started a business repairing e-bikes with Blueberry as my company logo. Jake's E-Bike Repair and my love for fixing bikes and building them stemmed from my failures and successes with Blueberry. I'd learned how to build batteries, wire controllers, and program an e-bike, as well as work on tires, brakes, and derailleurs, and I continued to tweak Blueberry to be closer and closer to my vision until I was mostly satisfied.
