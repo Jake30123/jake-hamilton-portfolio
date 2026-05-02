@@ -3,7 +3,7 @@ slug: throttle-firmware
 order: 2
 category: FSAE
 title: "Throttle Firmware"
-subtitle: "Writing throttle logic and fault handling."
+subtitle: "Writing throttle logic and fault handling for a Formula SAE car."
 thumbnail: assets/img/firm/thr1.png
 hero: assets/img/firm/thr1.png
 tags: [Firmware, C, CAN bus, FSAE rules]

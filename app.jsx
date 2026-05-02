@@ -28,6 +28,23 @@ function highlightC(src) {
   return out;
 }
 
+// ---------- copy-email button ----------
+function CopyEmailButton({ className, children }) {
+  const [copied, setCopied] = useState(false);
+  function copy(e) {
+    e.preventDefault();
+    navigator.clipboard.writeText(CFG.email || "jhamilton@olin.edu").then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    });
+  }
+  return (
+    <a href={`mailto:${CFG.email || "jhamilton@olin.edu"}`} className={className} onClick={copy}>
+      {copied ? "Copied!" : children}
+    </a>
+  );
+}
+
 // ---------- nav ----------
 function Nav({ goTo }) {
   const [scrolled, setScrolled] = useState(false);
@@ -47,7 +64,7 @@ function Nav({ goTo }) {
         <nav className="nav-links">
           <a href="#projects" onClick={(e) => { e.preventDefault(); goTo("projects"); }}>Projects</a>
           <a href="#about" onClick={(e) => { e.preventDefault(); goTo("about"); }}>About</a>
-          <a href={`mailto:${CFG.email || "canaanjake9@gmail.com"}`}>Email</a>
+          <CopyEmailButton>Email</CopyEmailButton>
           <a href={CFG.linkedin || "#"} target="_blank" rel="noopener">LinkedIn</a>
         </nav>
       </div>
@@ -76,7 +93,7 @@ function Hero({ tweaks, onOpen }) {
           <a className="btn btn-primary" href="#projects" onClick={(e) => { e.preventDefault(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}>
             View projects <span className="arrow">→</span>
           </a>
-          <a className="btn btn-ghost" href={`mailto:${CFG.email || "canaanjake9@gmail.com"}`}>Email</a>
+          <CopyEmailButton className="btn btn-ghost">Email</CopyEmailButton>
         </div>
       </div>
       <div className="container hero-stage">
@@ -87,7 +104,7 @@ function Hero({ tweaks, onOpen }) {
           <div className="hero-feature-meta">
             <div className="hero-feature-eyebrow">Origin · 2021</div>
             <div className="hero-feature-title">Blueberry — the bike that started it all.</div>
-            <div className="hero-feature-sub">A well loved e-bike, a garage fire, and the essay that got me into Olin.</div>
+            <div className="hero-feature-sub">A well loved e-bike, a garage fire, and my Olin application essay.</div>
             <div className="hero-feature-cta">Read the story <span className="arrow">→</span></div>
           </div>
         </button>
@@ -195,10 +212,10 @@ function About() {
       <div className="container about-grid">
         <div>
           <div className="section-eyebrow">About</div>
-          <h2 className="section-title">A short bio.</h2>
+          <h2 className="section-title">Bio</h2>
           {(CFG.about || []).map((para, i) => <p key={i} className="about-body">{para}</p>)}
           <div className="about-ctas">
-            <a className="btn btn-primary" href={`mailto:${CFG.email || "canaanjake9@gmail.com"}`}>Get in touch <span className="arrow">→</span></a>
+            <CopyEmailButton className="btn btn-primary">Get in touch <span className="arrow">→</span></CopyEmailButton>
             <a className="btn btn-ghost" href={CFG.linkedin || "#"} target="_blank" rel="noopener">LinkedIn</a>
           </div>
         </div>
@@ -348,7 +365,7 @@ function Footer() {
         <div>© 2026 Jake Hamilton</div>
         <div className="footer-links">
           <a href={CFG.linkedin || "#"} target="_blank" rel="noopener">LinkedIn</a>
-          <a href={`mailto:${CFG.email || "canaanjake9@gmail.com"}`}>Email</a>
+          <CopyEmailButton>Email</CopyEmailButton>
         </div>
       </div>
     </footer>
