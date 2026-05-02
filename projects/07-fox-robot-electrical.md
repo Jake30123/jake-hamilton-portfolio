@@ -8,7 +8,7 @@ thumbnail: assets/img/fox-bot/electrical.jpg
 hero: assets/img/fox-bot/electrical.jpg
 tags: [Robotics, Power systems, Raspberry Pi, Course project]
 status: null
-role: "PIE — team electrical lead"
+role: "PIE · Electrical Team Lead"
 year: "2025"
 ---
 > This is a snippet of a larger project. Full project documentation: jake30123.github.io/foxbot-website/

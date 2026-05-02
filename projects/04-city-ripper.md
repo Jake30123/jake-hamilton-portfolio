@@ -8,7 +8,7 @@ thumbnail: assets/img/white/white_small.jpg
 hero: assets/img/white/white.jpg
 tags: [EV build, Battery, 76V, Commuter]
 status: null
-role: "Personal build"
+role: "Personal build · Jake's E-Bike Repair LLC"
 year: "2022"
 specs:
   - ["Frame", "EEB Enduro"]
