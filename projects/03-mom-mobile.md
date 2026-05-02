@@ -89,8 +89,8 @@ After mounting the motor and final spline adapter, I was able to finish up all t
 ![Me adjusting the battery mounting on the nearly complete ATV](assets/img/atv/final1.jpg)
 *Me tweaking the battery mounting on the almost-finished ATV.*
 
-![My mom out for a ride on our farm](assets/img/atv/new2.jpeg)
-*My mom out for a ride on our farm.*
+![My mom out for a ride on our farm](assets/img/atv/4142.jpg)
+*My mom whizzing by a trail cam on the ATV.*
 
 I have yet to do the final painting or battery mounting, but the ATV is now rideable, and my mom absolutely loves it.
 

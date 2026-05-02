@@ -12,7 +12,7 @@ status: null
 role: "Personal build · Jake's E-Bike Repair LLC"
 year: "2020–2022"
 ---
-> This is the essay that got me into Olin with pictures added.
+> This is the essay from my Olin application with pictures added.
 
 Instead of coffee to start that February day, I had fire to wake me up. It started at 4am with my mom banging on my basement bedroom door yelling that the garage was on fire. I ran out of bed, up the stairs, and out to the driveway where black smoke was billowing out of the garage. For a minute I did not process what was happening, but then, through the clouds, I saw orange flames in the shape of a bike. This e-bike was mine and its name was Blueberry. For more than two years, I'd been saving, building, and re-building my precious e-bike, which in the matter of an hour was gone. (The fire was in the concrete garage, the rest of the house was undamaged.)
 
@@ -23,8 +23,8 @@ Blueberry started life as a normal e-bike doing normal e-bike things. During the
 
 Blueberry and I had a good six months together. Blueberry happily chugged along as my daily commuter bike. I went to school, took every opportunity to explore DC alone, and went on long rides around DC, Maryland, and Virginia with the e-bike community I found.
 
-![Me taking will to school on my bike](assets/img/blu/bluw.jpg)
-*Me taking Will to school on my bike.*
+![Me taking my brother Will to school on my bike](assets/img/blu/bluw.jpg)
+*Me taking my brother Will to school on my bike.*
 
 Then I got the upgrade bug. It started when a key component in the battery failed and I had to fully tear down the bike to fix it. Looking at all the parts made me realize I could make this one bigger, make that just a bit better. And so, I did.
 

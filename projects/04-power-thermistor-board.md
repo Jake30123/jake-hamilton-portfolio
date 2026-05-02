@@ -36,7 +36,7 @@ Solder: Normally open solder points.
 
 ### Design Process
 
-Before this project, I had never designed a PCB. I had experience with circuits and wiring, but never a full PCB from scratch. I broke down this problem into three sections: Mechanical Fit, Electrical Functionality, and Design Quality.
+This was my first time designing a PCB. I had experience with circuits and wiring, but never a full PCB from scratch. I broke down this problem into three sections: Mechanical Fit, Electrical Functionality, and Design Quality.
 
 Above all, my design needed to fit the accumulator segments; without this fit, the board was obsolete. To ensure this, I got a DXF board outline file from the Accumulator team, and we discussed which parts of the outline could be changed and which could not.
 
