@@ -8,7 +8,7 @@ thumbnail: assets/img/vortex/vortex_small.jpg
 hero: assets/img/vortex/vortex.jpg
 tags: [EV build, Battery, 96V, Liquid cooling]
 status: null
-role: "Personal build"
+role: "Personal build · Jake's E-Bike Repair LLC"
 year: "2023"
 specs:
   - ["Frame", "Vector Vortex"]
