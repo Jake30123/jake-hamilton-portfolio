@@ -1,9 +1,2 @@
-*.gem
-.bundle
-.sass-cache
-.jekyll-cache
-_site
-Gemfile.lock
-unused
-bootstrap-reference.html
-salami
+# Files staged for deletion — not deployed
+delete/

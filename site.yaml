@@ -1,0 +1,40 @@
+# Site-wide configuration — edit here, then run: node scripts/build.js
+# The email and LinkedIn link appear in the nav, hero, about section, and footer.
+
+email: canaanjake9@gmail.com
+linkedin: https://www.linkedin.com/in/james-keller-hamilton-2593b1328/
+
+# Status pill in the hero section.
+status: "May 2026 — running Mk7 BMS bring-up; open to Summer 2026 internships."
+
+# Four-stat skim strip below the hero.
+# The "Built" item uses titleNum + titleText to render the big serif number.
+skim:
+  - eyebrow: Education
+    title: "Olin College, '28"
+    sub: B.S. Electrical Engineering
+  - eyebrow: Now
+    title: Project Manager
+    sub: Olin Electric Motorsports (FSAE)
+  - eyebrow: Built
+    titleNum: "5"
+    titleText: EV builds
+    sub: "E-bikes, motorcycles, an ATV"
+  - eyebrow: From
+    title: "Washington, DC"
+    sub: Currently in Needham, MA
+
+# About section body paragraphs (one item per paragraph).
+about:
+  - >-
+    I am an Electrical Engineering student at Olin College of Engineering with
+    a focused passion for electric vehicles, battery technology, and power
+    electronics. I combine my academic pursuits with extensive hands-on
+    experience.
+  - >-
+    My practical skills have been honed through numerous personal DIY projects,
+    running my own business, and designing and manufacturing custom printed
+    circuit boards for the Olin Electric Motorsports (FSAE) team, where I am
+    now the project manager.
+  - >-
+    I'm originally from Washington, DC, and plan to graduate Olin in 2028.
