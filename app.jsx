@@ -87,7 +87,7 @@ function Hero({ tweaks, onOpen }) {
           <div className="hero-feature-meta">
             <div className="hero-feature-eyebrow">Origin · 2021</div>
             <div className="hero-feature-title">Blueberry — the bike that started it all.</div>
-            <div className="hero-feature-sub">A $500 e-bike, a garage fire, and the essay that got me into Olin.</div>
+            <div className="hero-feature-sub">A well loved e-bike, a garage fire, and the essay that got me into Olin.</div>
             <div className="hero-feature-cta">Read the story <span className="arrow">→</span></div>
           </div>
         </button>

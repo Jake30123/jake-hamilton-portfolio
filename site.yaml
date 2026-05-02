@@ -1,11 +1,11 @@
 # Site-wide configuration — edit here, then run: node scripts/build.js
 # The email and LinkedIn link appear in the nav, hero, about section, and footer.
 
-email: canaanjake9@gmail.com
+email: jhamilton@olin.edu
 linkedin: https://www.linkedin.com/in/james-keller-hamilton-2593b1328/
 
 # Status pill in the hero section.
-status: "May 2026 — running Mk7 BMS bring-up; open to Summer 2026 internships."
+status: "May 2026 — debugging FSAE electronics · Open to Fall 2026 Co-Op."
 
 # Four-stat skim strip below the hero.
 # The "Built" item uses titleNum + titleText to render the big serif number.
