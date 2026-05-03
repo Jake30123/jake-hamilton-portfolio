@@ -115,6 +115,28 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding-top: clamp(56px, 9vw, 112px);
   padding-bottom: clamp(48px, 7vw, 88px);
 }
+.hero-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(32px, 6vw, 80px);
+}
+.hero-top-text { flex: 1 1 auto; min-width: 0; }
+.hero-portrait {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-soft);
+  width: clamp(280px, 36vw, 440px);
+  aspect-ratio: 4 / 5;
+  flex-shrink: 0;
+}
+.hero-portrait img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.95); }
+.hero-portrait .frame-line { position: absolute; inset: 0; border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px rgba(14, 20, 23, 0.06); pointer-events: none; }
+@media (max-width: 880px) {
+  .hero-top { flex-direction: column; align-items: flex-start; gap: 32px; }
+  .hero-portrait { width: 100%; max-width: 420px; }
+}
 .hero-headline {
   font-family: var(--serif);
   font-weight: 400;
@@ -218,33 +240,16 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   border-top: 1px solid var(--line-soft);
   background: linear-gradient(180deg, transparent, rgba(220, 234, 241, 0.12));
 }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 1fr;
-  gap: clamp(32px, 6vw, 80px);
-  align-items: center;
-}
+.about-layout { max-width: 68ch; }
+.about-body-wrap { max-width: 68ch; }
 .about-body {
   font-size: 17px;
   line-height: 1.7;
   color: var(--ink-2);
   margin: 0 0 16px;
   text-wrap: pretty;
-  max-width: 56ch;
 }
 .about-ctas { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
-.about-portrait {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--bg-soft);
-  aspect-ratio: 4 / 3;
-}
-.about-portrait img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.95); }
-.about-portrait .frame-line { position: absolute; inset: 0; border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px rgba(14, 20, 23, 0.06); pointer-events: none; }
-@media (max-width: 800px) {
-  .about-grid { grid-template-columns: 1fr; gap: 28px; }
-}
 
 .status {
   display: inline-flex;
