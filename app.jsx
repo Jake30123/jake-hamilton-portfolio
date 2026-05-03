@@ -76,24 +76,30 @@ function Nav({ goTo }) {
 function Hero({ tweaks, onOpen }) {
   return (
     <section className="hero-v2">
-      <div className="container">
-        <div className="status">
-          <span className="pulse"></span>
-          <span>{tweaks.statusLine}</span>
+      <div className="container hero-top">
+        <div className="hero-top-text">
+          <div className="status">
+            <span className="pulse"></span>
+            <span>{tweaks.statusLine}</span>
+          </div>
+          <h1 className="hero-headline">
+            Building&nbsp;<span className="amp">EVs</span>, batteries, and the firmware that runs them.
+          </h1>
+          <div className="hero-byline">
+            <span>Electrical Engineering · Olin College, '28</span>
+            <span className="sep">·</span>
+            <span>Project Manager, Olin Electric Motorsports</span>
+          </div>
+          <div className="hero-ctas">
+            <a className="btn btn-primary" href="#projects" onClick={(e) => { e.preventDefault(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}>
+              View projects <span className="arrow">→</span>
+            </a>
+            <CopyEmailButton className="btn btn-ghost">Email</CopyEmailButton>
+          </div>
         </div>
-        <h1 className="hero-headline">
-          Building&nbsp;<span className="amp">EVs</span>, batteries, and the firmware that runs them.
-        </h1>
-        <div className="hero-byline">
-          <span>Electrical Engineering · Olin College, '28</span>
-          <span className="sep">·</span>
-          <span>Project Manager, Olin Electric Motorsports</span>
-        </div>
-        <div className="hero-ctas">
-          <a className="btn btn-primary" href="#projects" onClick={(e) => { e.preventDefault(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}>
-            View projects <span className="arrow">→</span>
-          </a>
-          <CopyEmailButton className="btn btn-ghost">Email</CopyEmailButton>
+        <div className="hero-portrait">
+          <img src="assets/img/portrait.jpg" alt="Portrait of Jake Hamilton" loading="lazy" />
+          <div className="frame-line"></div>
         </div>
       </div>
       <div className="container hero-stage">
@@ -209,19 +215,15 @@ function ProjectGrid({ onOpen }) {
 function About() {
   return (
     <section className="section about-section" id="about">
-      <div className="container about-grid">
-        <div>
-          <div className="section-eyebrow">About</div>
-          <h2 className="section-title">Bio</h2>
+      <div className="container about-layout">
+        <div className="section-eyebrow">About</div>
+        <h2 className="section-title">Bio</h2>
+        <div className="about-body-wrap">
           {(CFG.about || []).map((para, i) => <p key={i} className="about-body">{para}</p>)}
           <div className="about-ctas">
             <CopyEmailButton className="btn btn-primary">Get in touch <span className="arrow">→</span></CopyEmailButton>
             <a className="btn btn-ghost" href={CFG.linkedin || "#"} target="_blank" rel="noopener">LinkedIn</a>
           </div>
-        </div>
-        <div className="about-portrait">
-          <img src="assets/img/portrait.jpg" alt="Portrait of Jake Hamilton" loading="lazy" />
-          <div className="frame-line"></div>
         </div>
       </div>
     </section>
