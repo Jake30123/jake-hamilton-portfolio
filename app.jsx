@@ -76,6 +76,14 @@ function Nav({ goTo }) {
 function Hero({ tweaks, onOpen }) {
   return (
     <section className="hero-v2">
+      <div id="hero-circuit" className="hero-circuit" aria-hidden="true"></div>
+      <div className="hv-label" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 3.4 22 20.6H2L12 3.4Z" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+          <path d="M12.8 9.2l-3.6 5.2h2.5l-1.1 4.4 4-5.9h-2.5l1.7-3.7z" fill="currentColor" />
+        </svg>
+        <span>Warning: High Voltage</span>
+      </div>
       <div className="container hero-top">
         <div className="hero-top-text">
           <div className="status">
@@ -180,9 +188,10 @@ function ProjectGrid({ onOpen }) {
         </div>
 
         <div className="grid">
-          {filtered.map((p) => (
+          {filtered.map((p, i) => (
             <button className="card reveal" key={p.slug} onClick={() => onOpen(p.slug)}>
               <div className="card-thumb">
+                <span className="card-index">{String(i + 1).padStart(2, "0")}</span>
                 <img src={p.thumbnail} alt={p.title} loading="lazy" />
                 <div className="card-cat">{p.category}</div>
                 {p.status && <div className="card-status">{p.status}</div>}
@@ -386,7 +395,7 @@ function useReveal(deps) {
 }
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "accent": "steel",
+  "accent": "ember",
   "statusLine": CFG.status || "May 2026 — running Mk7 BMS bring-up; open to Summer 2026 internships."
 }/*EDITMODE-END*/;
 
@@ -398,6 +407,7 @@ function TweaksUI({ tweaks, setTweak }) {
           value={tweaks.accent}
           onChange={(v) => setTweak("accent", v)}
           options={[
+            { value: "ember", label: "Ember" },
             { value: "steel", label: "Steel" },
             { value: "seafoam", label: "Seafoam" },
             { value: "sky", label: "Sky" },
@@ -427,7 +437,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-accent", tweaks.accent || "steel");
+    document.documentElement.setAttribute("data-accent", tweaks.accent || "ember");
   }, [tweaks.accent]);
 
   useReveal([route]);
