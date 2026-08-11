@@ -5,7 +5,7 @@ email: jhamilton@olin.edu
 linkedin: https://www.linkedin.com/in/james-keller-hamilton-2593b1328/
 
 # Status pill in the hero section.
-status: "May 2026 — debugging FSAE electronics · Open to Fall 2026 Co-Op."
+status: "August 2026 — Part-Time at BETA Technologies · Open to Spring 2027 Co-Op."
 
 # Four-stat skim strip below the hero.
 # The "Built" item uses titleNum + titleText to render the big serif number.
@@ -14,8 +14,8 @@ skim:
     title: "Olin College, '28"
     sub: B.S. Electrical Engineering
   - eyebrow: Now
-    title: Project Manager
-    sub: Olin Electric Motorsports (FSAE)
+    title: Part-Time
+    sub: BETA Technologies
   - eyebrow: Built
     titleNum: "5"
     titleText: EV builds
