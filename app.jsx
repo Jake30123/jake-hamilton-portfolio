@@ -96,7 +96,7 @@ function Hero({ tweaks, onOpen }) {
           <div className="hero-byline">
             <span>Electrical Engineering · Olin College, '28</span>
             <span className="sep">·</span>
-            <span>Project Manager, Olin Electric Motorsports</span>
+            <span>Battery R&D Intern, BETA Technologies</span>
           </div>
           <div className="hero-ctas">
             <a className="btn btn-primary" href="#projects" onClick={(e) => { e.preventDefault(); document.getElementById("projects")?.scrollIntoView({ behavior: "smooth", block: "start" }); }}>
