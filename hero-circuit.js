@@ -77,6 +77,17 @@
     return g;
   }
 
+  // IPC-2221B Table 6-1, column B2 (external, uncoated, sea level–3050 m)
+  function ipcMinMM(voltStr) {
+    const v = parseInt(voltStr, 10);
+    if (!v) return null;
+    if (v <= 30) return "0.1";
+    if (v <= 150) return "0.6";
+    if (v <= 300) return "1.25";
+    if (v <= 500) return "2.5";
+    return (v * 0.005).toFixed(2);
+  }
+
   // drawing-style clearance dimension across the text↔portrait gap
   function dimension(svg, x0, x1, y, voltage) {
     if (x1 - x0 < 26) return;
@@ -104,6 +115,22 @@
     tv.textContent = voltage;
     t.appendChild(tv);
     g.appendChild(t);
+    const ipc = ipcMinMM(voltage);
+    if (ipc) {
+      const sub = make("text", {
+        transform: `translate(${(x0 + x1) / 2 + 6}, ${y}) rotate(-90)`,
+        "text-anchor": "middle",
+        "font-family": "'JetBrains Mono', monospace",
+        "font-size": "8",
+        "letter-spacing": "0.6",
+        fill: "#A8B0B8",
+        "paint-order": "stroke",
+        stroke: COLOR.bg,
+        "stroke-width": 3,
+      });
+      sub.textContent = `IPC-2221B MIN ${ipc} MM`;
+      g.appendChild(sub);
+    }
     svg.appendChild(g);
   }
 

@@ -143,7 +143,8 @@
     g.appendChild(t);
   }
 
-  // across the column gap — label runs vertically inside the gap
+  // across the column gap — label runs vertically inside the gap, with the
+  // IPC minimum alongside so the margin reads as gloriously overbuilt
   function dimensionH(svg, A, B, voltage) {
     const x0 = A.right + 3, x1 = B.left - 3;
     if (x1 - x0 < 22) return;
@@ -160,6 +161,22 @@
       transform: `translate(${(x0 + x1) / 2 - 5}, ${y}) rotate(-90)`,
       "text-anchor": "middle",
     }, ((x1 - x0) / PX_PER_MM).toFixed(1), voltage);
+    const ipc = ipcMinMM(voltage);
+    if (ipc) {
+      const sub = make("text", {
+        transform: `translate(${(x0 + x1) / 2 + 6}, ${y}) rotate(-90)`,
+        "text-anchor": "middle",
+        "font-family": "'JetBrains Mono', monospace",
+        "font-size": "8",
+        "letter-spacing": "0.6",
+        fill: "#A8B0B8",
+        "paint-order": "stroke",
+        stroke: COLOR.bg,
+        "stroke-width": 3,
+      });
+      sub.textContent = `IPC-2221B MIN ${ipc} MM`;
+      g.appendChild(sub);
+    }
     svg.appendChild(g);
   }
 
