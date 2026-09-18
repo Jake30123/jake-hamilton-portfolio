@@ -108,6 +108,9 @@ function Hero({ tweaks, onOpen }) {
         <div className="hero-portrait">
           <img src="assets/img/portrait.jpg" alt="Portrait of Jake Hamilton" loading="lazy" />
           <div className="frame-line"></div>
+          <a className="photo-credit" href="https://leisejones.com/about/" target="_blank" rel="noopener noreferrer">
+            Photo: Leise Jones Photography
+          </a>
         </div>
       </div>
       <div className="container hero-stage">
