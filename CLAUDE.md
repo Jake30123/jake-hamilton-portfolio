@@ -32,7 +32,7 @@ There is no bundler. React 18, ReactDOM, and Babel standalone are loaded from CD
 
 ## Adding or editing a project
 
-1. Create or edit `projects/NN-slug.md`. The front matter fields are: `slug`, `category` (Personal | FSAE), `title`, `subtitle`, `thumbnail`, `hero`, `tags`, `status`, `role`, `year`, and optionally `featured` and `specs` (array of `["Key", "Value"]` pairs).
+1. Create or edit `projects/NN-slug.md`. The front matter fields are: `slug`, `category` (Personal | FSAE | Professional), `title`, `subtitle`, `thumbnail`, `hero`, `tags`, `status`, `role`, `year`, and optionally `featured` and `specs` (array of `["Key", "Value"]` pairs). `Professional` is for paid customer work and internships. The category filter pills are hardcoded in `app.jsx` (`ProjectGrid`'s `cats` array) — adding a new category value requires adding it there too.
 2. The Markdown body supports: `## / ### / ####` headings, paragraphs, `![alt](src)` images (optional `*italic caption*` on the next line), `<!-- pair --> ... <!-- /pair -->` for side-by-side images, `<!-- specs: Title --> ... <!-- /specs -->` for key-value tables, `<!-- rules --> ... <!-- /rules -->` for FSAE rule citations, fenced code blocks (defaults to `c`), `> blockquote` for standalone captions, and `| table |` syntax.
 3. Run `node scripts/build.js` and commit `data.js` alongside the content changes.
 
