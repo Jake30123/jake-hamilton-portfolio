@@ -157,7 +157,7 @@ function Skim() {
 // ---------- project grid ----------
 function ProjectGrid({ onOpen }) {
   const [filter, setFilter] = useState("All");
-  const cats = ["All", "FSAE", "Personal"];
+  const cats = ["All", "FSAE", "Personal", "Professional"];
   const counts = useMemo(() => {
     const c = { All: window.PROJECTS.length };
     cats.slice(1).forEach((k) => (c[k] = window.PROJECTS.filter((p) => p.category === k).length));
@@ -167,6 +167,8 @@ function ProjectGrid({ onOpen }) {
     () => filter === "All" ? window.PROJECTS : window.PROJECTS.filter((p) => p.category === filter),
     [filter]
   );
+  // Cards mounted by a filter change need their own reveal pass; the App-level one only runs on route change.
+  useReveal([filter]);
 
   return (
     <section className="section" id="projects">
@@ -388,7 +390,7 @@ function Footer() {
 
 function useReveal(deps) {
   useEffect(() => {
-    const els = document.querySelectorAll(".reveal");
+    const els = document.querySelectorAll(".reveal:not(.in)");
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
     }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
