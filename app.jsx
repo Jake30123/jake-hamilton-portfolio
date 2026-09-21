@@ -114,15 +114,15 @@ function Hero({ tweaks, onOpen }) {
         </div>
       </div>
       <div className="container hero-stage">
-        <button className="hero-feature" onClick={() => onOpen("blueberry")}>
+        <button className="hero-feature" onClick={() => onOpen("beta-technologies-internship")}>
           <div className="hero-feature-img">
-            <img src="assets/img/blu/blu1.jpg" alt="Blueberry, the e-bike that started it all" />
+            <img src="assets/img/beta/hero.jpg" alt="Battery R&D work at BETA Technologies" />
           </div>
           <div className="hero-feature-meta">
-            <div className="hero-feature-eyebrow">Origin · 2021</div>
-            <div className="hero-feature-title">Blueberry — the bike that started it all.</div>
-            <div className="hero-feature-sub">A well loved e-bike, a garage fire, and my Olin application essay.</div>
-            <div className="hero-feature-cta">Read the story <span className="arrow">→</span></div>
+            <div className="hero-feature-eyebrow">Now · 2026</div>
+            <div className="hero-feature-title">BETA Technologies — Battery R&D.</div>
+            <div className="hero-feature-sub">Battery Design Intern on the Battery R&D team.</div>
+            <div className="hero-feature-cta">Read more <span className="arrow">→</span></div>
           </div>
         </button>
       </div>

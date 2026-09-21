@@ -2,7 +2,6 @@
 slug: blueberry
 order: 1
 category: Personal
-featured: true
 title: "Blueberry"
 subtitle: "The bike that started it all."
 thumbnail: assets/img/blu/blu1.jpg

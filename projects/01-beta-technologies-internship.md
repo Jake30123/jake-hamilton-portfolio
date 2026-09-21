@@ -1,8 +1,9 @@
 ---
 slug: beta-technologies-internship
 category: Professional
+featured: true
 title: "BETA Technologies — Battery R&D"
-subtitle: "Battery Design Internship on the Battery R&D team."
+subtitle: "Internship on the Battery R&D team."
 thumbnail: assets/img/beta/hero.jpg
 hero: assets/img/beta/hero.jpg
 tags: [Battery, R&D, Internship]
