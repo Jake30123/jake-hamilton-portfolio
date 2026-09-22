@@ -16,29 +16,29 @@ year: "May 2026 – Present"
 
 ## Overview
 
-My full-time internship at BETA Technologies was only about 11 weeks, but it was absolutely packed with learning!
+My full-time internship at BETA Technologies was only about 11 weeks, but it was absolutely packed!
 
 ### First Impressions
 
-On my first day we got a tour of the facilities, and I just remember being blown away by the scale and complexity of electric aviation. I'd built battery systems for my own projects before, but working alongside engineers on an electric aircraft program showed me how much deeper the engineering challenges get at aerospace scale.
+On my first day we got a tour of the facilities, and I just remember being blown away by the scale and complexity of the motors and batteries. I'd built battery systems for my own projects before, but working alongside engineers on an electric aircraft program gave me a much deeper respect for the engineering challenges get at aerospace scale.
 
-Everyone was incredibly welcoming, curious, and excited about the work. It was pretty clear right away that people really cared about building safe, sustainable aviation technology.
+From the start, it was incredibly clear that everyone at BETA believed in the mission of sustainable and safe aviation. And, they were all huge nerds about airplanes!
 
 ### Battery Testing and Analysis
 
 One of my first projects was supporting battery thermal testing and analysis. Before I could start anything, I had to understand the purpose of the work, figure out what information we actually needed, and work out how to collect the data in a way that was reliable and useful.
 
-I helped write a test procedure, and I learned just how important clear, repeatable documentation is in an engineering environment. This was honestly harder than I expected! I also got experience working safely around high-energy electrical systems and using lab equipment to collect and evaluate test data.
+I helped write a test procedure, and I learned just how important clear, repeatable documentation is in an engineering environment. This was honestly harder than I expected. I also got experience working safely around high-energy electrical systems and using lab equipment to collect and evaluate test data.
 
 The project showed me how experimental work connects to bigger engineering decisions. It was super rewarding to see how careful testing, documentation, and analysis can support broader modeling and development work.
 
 ### Internal Data-Visualization Tool
 
-Another project was building an internal web app for exploring battery cell data. Engineers had data from a bunch of different sources, but there wasn't a great way to compare it all and look for trends.
+Another project was building an internal web app for exploring battery cell data. Engineers had data from a bunch of different sources, but there wasn't a great way to compare it all quickly.
 
-I talked with the people who'd actually be using it, learned from the analysis workflows they already had, and built a tool that let them pick and compare data visually. It gave me a much better sense of how software can make technical information easier to use and help a whole team collaborate faster.
+I talked with the people who'd actually be using it, learned from the analysis wtools they already had, and built an app that let them compare data visually. It gave me a much better sense of how software can make technical information easier to use and how to display complex data.
 
-This was also one of my first times really using AI-assisted development, and it was impressive how quickly I could iterate. It still took a lot of careful thought about what users needed, how the data was organized, and how to make the tool easy to use.
+This was also one of my first times really using AI-assisted development, and it was impressive how quickly I could build. It still took a lot of careful thought about what users needed, how the data was organized, and how to make the tool easy to use.
 
 ### Data Review and Engineering Support
 
@@ -48,7 +48,7 @@ This project really drove home the importance of asking clear questions, checkin
 
 ### Test Fixture Development
 
-Later in my internship I worked on designing and building a test fixture for evaluating battery cells. It involved planning experiments, writing procedures, getting feedback from a lot of different people, and balancing technical requirements with practical constraints like repeatability, manufacturability, and not wasting resources. There's no use in having a super cool test fixture if it's a pain to use every time!
+Later in my internship I worked on designing and building a test fixture for evaluating battery cells. It involved planning experiments, writing procedures, getting feedback from a lot of different people, and balancing technical requirements with practical constraints like repeatability, manufacturability, and not wasting resources. There's no use in having a super cool test fixture if it's a pain to use every time.
 
 I used CAD tools, fabricated parts, and helped with early testing before handing the project off to the team. This was one of my favorite parts of the internship, because it combined analysis, mechanical design, hands-on fabrication, and teamwork all in one.
 
@@ -60,4 +60,4 @@ I had real ownership over my work. I learned to show up to meetings prepared, wi
 
 What I appreciate most about BETA is how mission-driven it is. You can tell the focus on sustainable and safe aviation runs through the whole organization, and it feels like everyone is genuinely rowing in the same direction.
 
-I'm really grateful to my co-workers and mentors for all their support. It's been a fantastic experience overall! My confidence as an engineer has gone way up, and I have a much clearer idea of the kind of work I want to do.
+I'm really grateful to my co-workers and mentors for all their support. It's been a fantastic experience! My confidence as an engineer has gone way up, and I have a much clearer idea of the kind of work I want to do.
