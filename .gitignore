@@ -1,2 +1,3 @@
 # Files staged for deletion — not deployed
 delete/
+node_modules/

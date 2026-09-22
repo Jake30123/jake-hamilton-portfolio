@@ -430,35 +430,8 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "statusLine": CFG.status || "May 2026 — running Mk7 BMS bring-up; open to Summer 2026 internships."
 }/*EDITMODE-END*/;
 
-function TweaksUI({ tweaks, setTweak }) {
-  return (
-    <TweaksPanel title="Tweaks">
-      <TweakSection title="Accent palette">
-        <TweakRadio
-          value={tweaks.accent}
-          onChange={(v) => setTweak("accent", v)}
-          options={[
-            { value: "ember", label: "Ember" },
-            { value: "steel", label: "Steel" },
-            { value: "seafoam", label: "Seafoam" },
-            { value: "sky", label: "Sky" },
-            { value: "pine", label: "Pine" },
-          ]}
-        />
-      </TweakSection>
-      <TweakSection title="Hero status line">
-        <TweakText
-          value={tweaks.statusLine}
-          onChange={(v) => setTweak("statusLine", v)}
-          placeholder="May 2026 — running Mk7 BMS bring-up..."
-        />
-      </TweakSection>
-    </TweaksPanel>
-  );
-}
-
 function App() {
-  const [tweaks, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const tweaks = TWEAK_DEFAULTS;
   const [route, setRoute] = useState(() => parseHash());
 
   useEffect(() => {
@@ -507,7 +480,6 @@ function App() {
         </main>
       )}
       <Footer />
-      <TweaksUI tweaks={tweaks} setTweak={setTweak} />
     </>
   );
 }
