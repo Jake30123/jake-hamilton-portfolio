@@ -388,6 +388,10 @@ const projects = mdFiles.map(f => {
   };
   if (meta.featured) p.featured = true;
   if (meta.specs)    p.specs = meta.specs;
+  if (meta.heroCredit) {
+    p.heroCredit = meta.heroCredit;
+    if (meta.heroCreditUrl) p.heroCreditUrl = meta.heroCreditUrl;
+  }
   return p;
 });
 

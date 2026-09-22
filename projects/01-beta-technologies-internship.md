@@ -6,6 +6,8 @@ title: "BETA Technologies — Battery R&D"
 subtitle: "Internship on the Battery R&D team."
 thumbnail: assets/img/beta/hero.jpg
 hero: assets/img/beta/hero.jpg
+heroCredit: BETA Technologies
+heroCreditUrl: https://www.beta.team/
 tags: [Battery, R&D, Internship]
 status: "Ongoing — part-time"
 role: "Battery Design Intern — BETA Technologies"

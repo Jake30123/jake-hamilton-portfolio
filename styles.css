@@ -178,7 +178,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 .hero-portrait img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.95); }
 .hero-portrait .frame-line { position: absolute; inset: 0; border-radius: var(--radius-lg); box-shadow: inset 0 0 0 1px rgba(14, 20, 23, 0.06); pointer-events: none; }
-.hero-portrait .photo-credit {
+.hero-portrait .photo-credit,
+.detail-hero .photo-credit,
+.hero-feature-img .photo-credit,
+.card-thumb .photo-credit {
+  z-index: 1;
   position: absolute;
   right: 10px; bottom: 10px;
   padding: 4px 8px;
@@ -191,7 +195,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   opacity: .85;
   transition: opacity .15s ease;
 }
-.hero-portrait .photo-credit:hover { opacity: 1; }
+.hero-portrait .photo-credit:hover,
+.detail-hero .photo-credit:hover,
+.hero-feature-img .photo-credit:hover,
+.card-thumb .photo-credit:hover { opacity: 1; }
+.photo-credit[role="link"] { cursor: pointer; }
 
 /* equipment-grade warning sticker — the site does, in fact, spark */
 .hv-label {

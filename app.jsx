@@ -45,6 +45,28 @@ function CopyEmailButton({ className, children }) {
   );
 }
 
+// ---------- photo credit ----------
+// Inside a clickable card (a <button>), a real <a> is invalid HTML, so `nested`
+// renders a span that opens the link without triggering the card's click.
+function PhotoCredit({ credit, url, nested }) {
+  if (!credit) return null;
+  const label = `Photo: ${credit}`;
+  if (!url) return <span className="photo-credit">{label}</span>;
+  if (!nested) {
+    return <a className="photo-credit" href={url} target="_blank" rel="noopener noreferrer">{label}</a>;
+  }
+  const open = (e) => {
+    e.stopPropagation();
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+  return (
+    <span className="photo-credit" role="link" tabIndex={0} onClick={open}
+      onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); open(e); } }}>
+      {label}
+    </span>
+  );
+}
+
 // ---------- nav ----------
 function Nav({ goTo }) {
   const [scrolled, setScrolled] = useState(false);
@@ -74,6 +96,7 @@ function Nav({ goTo }) {
 
 // ---------- hero ----------
 function Hero({ tweaks, onOpen }) {
+  const beta = window.PROJECTS.find((p) => p.slug === "beta-technologies-internship");
   return (
     <section className="hero-v2">
       <div id="hero-circuit" className="hero-circuit" aria-hidden="true"></div>
@@ -117,6 +140,7 @@ function Hero({ tweaks, onOpen }) {
         <button className="hero-feature" onClick={() => onOpen("beta-technologies-internship")}>
           <div className="hero-feature-img">
             <img src="assets/img/beta/hero.jpg" alt="Battery R&D work at BETA Technologies" />
+            <PhotoCredit credit={beta?.heroCredit} url={beta?.heroCreditUrl} nested />
           </div>
           <div className="hero-feature-meta">
             <div className="hero-feature-eyebrow">Now · 2026</div>
@@ -200,6 +224,7 @@ function ProjectGrid({ onOpen }) {
                 <img src={p.thumbnail} alt={p.title} loading="lazy" />
                 <div className="card-cat">{p.category}</div>
                 {p.status && <div className="card-status">{p.status}</div>}
+                {p.thumbnail === p.hero && <PhotoCredit credit={p.heroCredit} url={p.heroCreditUrl} nested />}
               </div>
               <div className="card-body">
                 <div className="card-meta">
@@ -347,6 +372,7 @@ function Detail({ slug, onHome, onOpen }) {
 
         <div className="detail-hero">
           <img src={p.hero} alt={p.title} />
+          <PhotoCredit credit={p.heroCredit} url={p.heroCreditUrl} />
         </div>
 
         <article className="prose">
