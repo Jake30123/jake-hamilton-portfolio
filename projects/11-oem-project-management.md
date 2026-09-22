@@ -12,4 +12,5 @@ role: "Project Manager — Olin Electric Motorsports"
 year: "July 2025 – May 2026"
 ---
 WRITING IN PROGRESS
+
 See other projects for more of my experience, sorry for the inconvenience :)
