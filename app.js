@@ -168,6 +168,26 @@ function ProjectGrid({ onOpen }) {
 function About() {
   return /* @__PURE__ */ React.createElement("section", { className: "section about-section", id: "about" }, /* @__PURE__ */ React.createElement("div", { className: "container about-layout" }, /* @__PURE__ */ React.createElement("div", { className: "section-eyebrow" }, "About"), /* @__PURE__ */ React.createElement("h2", { className: "section-title" }, "Bio"), /* @__PURE__ */ React.createElement("div", { className: "about-body-wrap" }, (CFG.about || []).map((para, i) => /* @__PURE__ */ React.createElement("p", { key: i, className: "about-body" }, para)), /* @__PURE__ */ React.createElement("div", { className: "about-ctas" }, /* @__PURE__ */ React.createElement(CopyEmailButton, { className: "btn btn-primary" }, "Get in touch ", /* @__PURE__ */ React.createElement("span", { className: "arrow" }, "→")), /* @__PURE__ */ React.createElement("a", { className: "btn btn-ghost", href: CFG.linkedin || "#", target: "_blank", rel: "noopener" }, "LinkedIn")))));
 }
+function Media({ m }) {
+  const kind = m.kind || m.type;
+  if (kind === "youtube") {
+    const q = m.start ? `?start=${m.start}` : "";
+    return /* @__PURE__ */ React.createElement("div", { className: "embed" }, /* @__PURE__ */ React.createElement(
+      "iframe",
+      {
+        src: `https://www.youtube-nocookie.com/embed/${m.src}${q}`,
+        title: m.alt || "YouTube video",
+        loading: "lazy",
+        allow: "accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen",
+        allowFullScreen: true
+      }
+    ));
+  }
+  if (kind === "video") {
+    return m.loop ? /* @__PURE__ */ React.createElement("video", { src: m.src, "aria-label": m.alt || void 0, autoPlay: true, muted: true, loop: true, playsInline: true }) : /* @__PURE__ */ React.createElement("video", { src: m.src, "aria-label": m.alt || void 0, controls: true, playsInline: true, preload: "metadata" });
+  }
+  return /* @__PURE__ */ React.createElement("img", { src: m.src, alt: m.alt || "", loading: "lazy" });
+}
 function Block({ b }) {
   switch (b.type) {
     case "h2":
@@ -181,9 +201,11 @@ function Block({ b }) {
     case "caption":
       return /* @__PURE__ */ React.createElement("span", { className: "standalone-cap" }, b.text);
     case "img":
-      return /* @__PURE__ */ React.createElement("figure", { className: "figure" }, /* @__PURE__ */ React.createElement("img", { src: b.src, alt: b.alt || "", loading: "lazy" }), b.caption && /* @__PURE__ */ React.createElement("figcaption", null, b.caption));
+    case "video":
+    case "youtube":
+      return /* @__PURE__ */ React.createElement("figure", { className: "figure" }, /* @__PURE__ */ React.createElement(Media, { m: b }), b.caption && /* @__PURE__ */ React.createElement("figcaption", null, b.caption));
     case "pair":
-      return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "pair" }, /* @__PURE__ */ React.createElement("img", { src: b.left.src, alt: b.left.alt || "", loading: "lazy" }), /* @__PURE__ */ React.createElement("img", { src: b.right.src, alt: b.right.alt || "", loading: "lazy" })), b.caption && /* @__PURE__ */ React.createElement("span", { className: "pair-cap" }, b.caption));
+      return /* @__PURE__ */ React.createElement("div", null, /* @__PURE__ */ React.createElement("div", { className: "pair" }, /* @__PURE__ */ React.createElement(Media, { m: b.left }), /* @__PURE__ */ React.createElement(Media, { m: b.right })), b.caption && /* @__PURE__ */ React.createElement("span", { className: "pair-cap" }, b.caption));
     case "code":
       return /* @__PURE__ */ React.createElement(CodeBlock, { text: b.text, lang: b.lang || "c" });
     case "specs":

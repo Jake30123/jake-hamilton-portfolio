@@ -931,7 +931,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   margin: 40px 0;
   margin-inline: var(--breakout); /* images break wider than the text column */
 }
-.prose .figure img {
+.prose .figure img,
+.prose .figure video,
+.prose .figure .embed {
   border-radius: var(--radius-lg);
   border: 1px solid var(--line-soft);
   background: var(--bg-soft);
@@ -962,7 +964,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   margin: 40px 0;
   margin-inline: var(--breakout);
 }
-.prose .pair img {
+.prose .pair img,
+.prose .pair video,
+.prose .pair .embed {
   border-radius: var(--radius-lg);
   border: 1px solid var(--line-soft);
   background: var(--bg-soft);

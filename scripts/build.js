@@ -210,6 +210,23 @@ function splitFrontMatter(content) {
   };
 }
 
+// ── Media src → { kind, src, loop } ─────────────────────────────────────────
+// ![alt](clip.mp4)          → local video with controls
+// ![alt](clip.mp4 "loop")   → muted autoplay loop (GIF-style)
+// ![alt](https://youtu.be/…) → YouTube embed (supports ?t=90)
+function parseMedia(raw) {
+  const m = raw.trim().match(/^(\S+)(?:\s+"([^"]*)")?$/);
+  const src = m ? m[1] : raw.trim();
+  const title = m && m[2] ? m[2].trim().toLowerCase() : '';
+  const yt = src.match(/(?:youtube\.com\/(?:watch\?(?:.*&)?v=|embed\/|shorts\/)|youtu\.be\/)([\w-]{11})/);
+  if (yt) {
+    const t = src.match(/[?&](?:t|start)=(\d+)/);
+    return { kind: 'youtube', src: yt[1], start: t ? Number(t[1]) : null };
+  }
+  if (/\.(mp4|webm|mov|m4v)(\?.*)?$/i.test(src)) return { kind: 'video', src, loop: title === 'loop' };
+  return { kind: 'img', src };
+}
+
 // ── Markdown body → block array ───────────────────────────────────────────────
 function parseBody(md) {
   const blocks = [];
@@ -245,7 +262,7 @@ function parseBody(md) {
         if (pl.startsWith('![')) {
           const m = pl.match(/!\[([^\]]*)\]\(([^)]*)\)/);
           if (m) {
-            const obj = { src: m[2], alt: m[1] };
+            const obj = { ...parseMedia(m[2]), alt: m[1] };
             if (!pair.left) pair.left = obj; else pair.right = obj;
           }
         } else if ((pl.startsWith('*') && pl.endsWith('*')) || (pl.startsWith('_') && pl.endsWith('_'))) {
@@ -324,7 +341,8 @@ function parseBody(md) {
             i = j; // advance past caption line
           }
         }
-        blocks.push({ type: 'img', src: m[2], alt: m[1], caption });
+        const { kind, ...media } = parseMedia(m[2]);
+        blocks.push({ type: kind, ...media, alt: m[1], caption });
         i++; continue;
       }
     }

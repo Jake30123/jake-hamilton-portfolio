@@ -270,6 +270,31 @@ function About() {
 }
 
 // ---------- detail blocks ----------
+// Renders one image / video / YouTube item (standalone figure or pair cell).
+function Media({ m }) {
+  const kind = m.kind || m.type; // pair cells carry `kind`, standalone blocks `type`
+  if (kind === "youtube") {
+    const q = m.start ? `?start=${m.start}` : "";
+    return (
+      <div className="embed">
+        <iframe
+          src={`https://www.youtube-nocookie.com/embed/${m.src}${q}`}
+          title={m.alt || "YouTube video"}
+          loading="lazy"
+          allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+          allowFullScreen
+        />
+      </div>
+    );
+  }
+  if (kind === "video") {
+    return m.loop
+      ? <video src={m.src} aria-label={m.alt || undefined} autoPlay muted loop playsInline />
+      : <video src={m.src} aria-label={m.alt || undefined} controls playsInline preload="metadata" />;
+  }
+  return <img src={m.src} alt={m.alt || ""} loading="lazy" />;
+}
+
 function Block({ b }) {
   switch (b.type) {
     case "h2": return <h2>{b.text}</h2>;
@@ -278,9 +303,11 @@ function Block({ b }) {
     case "p":  return <p>{b.text}</p>;
     case "caption": return <span className="standalone-cap">{b.text}</span>;
     case "img":
+    case "video":
+    case "youtube":
       return (
         <figure className="figure">
-          <img src={b.src} alt={b.alt || ""} loading="lazy" />
+          <Media m={b} />
           {b.caption && <figcaption>{b.caption}</figcaption>}
         </figure>
       );
@@ -288,8 +315,8 @@ function Block({ b }) {
       return (
         <div>
           <div className="pair">
-            <img src={b.left.src} alt={b.left.alt || ""} loading="lazy" />
-            <img src={b.right.src} alt={b.right.alt || ""} loading="lazy" />
+            <Media m={b.left} />
+            <Media m={b.right} />
           </div>
           {b.caption && <span className="pair-cap">{b.caption}</span>}
         </div>
