@@ -501,7 +501,6 @@ function App() {
       ) : (
         <main>
           <Hero tweaks={tweaks} onOpen={open} />
-          <Skim />
           <ProjectGrid onOpen={open} />
           <About />
         </main>

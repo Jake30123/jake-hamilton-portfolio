@@ -295,7 +295,7 @@ function App() {
     }
   }
   const onDetail = route.kind === "detail";
-  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Nav, { goTo }), onDetail ? /* @__PURE__ */ React.createElement(Detail, { slug: route.slug, onHome: goTo, onOpen: open }) : /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement(Hero, { tweaks, onOpen: open }), /* @__PURE__ */ React.createElement(Skim, null), /* @__PURE__ */ React.createElement(ProjectGrid, { onOpen: open }), /* @__PURE__ */ React.createElement(About, null)), /* @__PURE__ */ React.createElement(Footer, null));
+  return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement(Nav, { goTo }), onDetail ? /* @__PURE__ */ React.createElement(Detail, { slug: route.slug, onHome: goTo, onOpen: open }) : /* @__PURE__ */ React.createElement("main", null, /* @__PURE__ */ React.createElement(Hero, { tweaks, onOpen: open }), /* @__PURE__ */ React.createElement(ProjectGrid, { onOpen: open }), /* @__PURE__ */ React.createElement(About, null)), /* @__PURE__ */ React.createElement(Footer, null));
 }
 function parseHash() {
   const h = window.location.hash || "";

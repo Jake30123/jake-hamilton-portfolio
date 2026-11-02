@@ -10,91 +10,83 @@ status: "In progress"
 role: "Customer Project"
 year: "2026"
 specs:
+  - ["Chassis", "1956 BMW Isetta"]
   - ["Battery", "2× Tesla Model S modules, 12S"]
   - ["Motor controller", "Curtis AC F6-A"]
+  - ["Motor", "Curtis AC-20"]
   - ["BMS", "Thunderstruck MCU + 2 satellite modules (isoSPI)"]
   - ["Charger", "Thunderstruck TSM2500"]
-  - ["Charge port", "NACS (J1772 signaling)"]
-  - ["HV conductors", "2 AWG"]
 ---
 
 ## Overview
 
-This project came about as a happy accident. I was at the Newton Green Expo in Newton, Massachusetts with the Olin College Formula SAE team. We had our electric car out and a couple of posters about the team, and there were little kids climbing all over everything. It was super fun! Then a local politician came up and asked if anyone there knew about batteries.
+This project came about on a random afternoon. I was at the Newton Green Expo in Newton, Massachusetts with the Olin College Formula SAE team. We had our car out and a couple of posters about the team, and there were little kids climbing all over everything. Everyone was having a great time and it was fun talking to folks about the work we did at Olin. Then a local politician came up and asked if anyone there knew about batteries.
 
-I'm glad I spoke up! So we got to talking, and he told me he knew a guy who was converting his little BMW Isetta to electric.
+I happened to know a thing or two so we got to talking, and he told me he knew a guy who was converting his little BMW Isetta to electric.
 
-My first thought was, what on earth is a BMW Isetta? It turns out it's a tiny bubble car BMW built in the 1950s, with a single door on the front and rear wheels set so close together they almost look like one. It's an absolutely adorable, ridiculous little car, and it's so small that you can convert it to electric with a pretty chill powertrain.
+My first thought was, what on earth is a BMW Isetta? It turns out it's a tiny bubble car BMW built in the 1950s, with a single door on the front and rear wheels set so close together they almost look like one. It's an absolutely adorable, ridiculous little car, and it's so small that you can convert it to electric with a pretty moderate powertrain.
 
 ### The Starting Point
 
-The owner had already bought a few components, including a BMS, two Tesla Model S battery modules, and a motor controller, and he needed someone to wire it all up for him. Right then I knew it was a project I could take on, but I also knew it was going to be a lot more than just wiring. There was going to be debugging and all the fun bits of integration, like parts that weren't there and systems that didn't want to talk to each other. It was going to be an adventure!
+The owner had already bought a few components, including a BMS, two Tesla Model S battery modules, and a motor controller, and he needed someone to wire it all up for him. I knew it was a project I could take on, but I also knew it was going to be a lot more than just wiring. There was going to be debugging and all the fun bits of integration, like parts that weren't there and systems that didn't want to talk to each other. It was going to be an adventure.
 
-When I first saw the car, there was no body on it. It had been stripped all the way down to the frame, and I remember thinking, wow, this guy is serious. None of the electrical work had been done yet, so I basically started from scratch.
+When I first saw the car, there was no body on it. It had been stripped all the way down to the frame. None of the electrical work had been done yet, so I started from scratch.
 
 ### Mapping the System
 
 My first step was getting a list of every component he had and pulling up all of their wiring diagrams. From there I figured out every single wire on the car I actually needed to care about to get to a bare minimum rolling chassis.
 
 <!-- specs: Wiring to map -->
-Throttle and brake: Driver inputs to the motor controller.
+Throttle and brake: Analog inputs to the motor controller.
 Charger to BMS: CAN.
 Controller to laptop: CAN for programming (which turned into a whole ordeal, more on that below).
 Charge port: J1772 signaling from the charge controller. The port is actually NACS, but it uses the same logic and wires as J1772 for AC charging.
 Main contactor: Relay control from the motor controller, since the controller runs the whole precharge circuit and has to close the main contactor itself.
 BMS modules: isoSPI between the Thunderstruck central MCU and its two satellite modules, one on each Tesla module.
+Motor to Controller: Resolver and Temp sense.
 <!-- /specs -->
 
-Once I had all the wires mapped out, I went through every part with little bits of Scotch tape and made wire flags, each with a little three letter abbreviation, so I always knew what was what.
+Once I had all the wires mapped out, I went through every part with little bits of Scotch tape and made wire flags, each with a little three letter abbreviation, so I always knew what was what. 
 
 ### High Voltage
 
-Thankfully the battery was a pretty simple install.
+The battery was a pretty simple install.
 
 ![Battery modules right after install](assets/img/isetta/1.jpg)
 *The two Tesla battery modules right after install.*
 
-The harder part was figuring out how much current I should actually let the system draw. The limiting factor ended up being the car's transmission. The original engine only made about 13 horsepower, and I didn't want to go too far past what the drivetrain was built for. Maybe just a little bit past it, because you've gotta give the car a bit of kick!
+The harder part was figuring out how much current I should actually let the system draw. The limiting factor ended up being the car's transmission. The original engine only made about 13 horsepower, and I didn't want to go too far past what the drivetrain was built for. Maybe just a little bit past it; a car this cute should have a little zest to it. 
 
-I worked the math backwards. Two 6S modules in series make a 12S pack at roughly 44 V nominal, and aiming for about 15 horsepower (around 11 kW) works out to roughly 250 A. I sized my conductors from there and landed on 2 AWG wire, which is about the biggest wire I could realistically work with in that space. It's tough material to bend.
+I worked the math backwards. Two 6S modules in series make a 12S pack at roughly 44 V nominal, and aiming for about 15 horsepower (around 11 kW) works out to roughly 250 A. I sized my conductors from there and landed on 2 AWG wire, which is about the biggest wire I could realistically work with in that space.
 
-With the high current conductors made, I wired up the main contactor, the charge contactor, and the BMS, and then ran a bare minimum test to see if I could get the contactors to close and open. Surprisingly, almost everything worked right away! The charge contactor was totally fine. The main contactor, however, would not close, and that one took me a long time to figure out.
+With the high current wires all crimped, I wired up the main contactor, the charge contactor, and the BMS, and then ran a bare minimum test to see if I could get the contactors to close and open. Nothing worked instantly, but after moving some wires around and fishing about with a multimeter I got the charge contactor to close. However, the main contactor would not close, and that one took me a long time to figure out.
 
 ![Annotated picture of electronics](assets/img/isetta/5.jpg)
 *Annotated view of the bare-bones electronics.*
 
+The answer ended up being that I had wired it backwards... a week long lesson in the necessity of being methodical. 
+
 #### Low Voltage
 
-I also wired up a complete 12 V system. We're redoing the car's entire low voltage wiring harness, so that became part of the project too.
+I also wired up a complete 12 V system. We're redoing the car's entire low voltage wiring harness, so that became part of the project too. All I needed at the battery step was a 48v -> 12V buck converter. 
 
-### Talking to a Curtis Controller
-
-The main contactor wasn't closing because the controller wasn't precharging. It would just flash its little status light to tell me it wasn't precharging, but it wouldn't tell me why, because that would be too easy. And so began the whole saga of figuring out how to actually talk to a Curtis controller.
-
-There isn't a ton of documentation from Curtis, and there aren't many people in the hobby world who use them. They're forklift motor controllers, so they're not really meant for cars. They work totally fine because they're super overbuilt, but forklift manufacturers aren't exactly telling the internet how they build their forklifts.
-
-#### Building My Own Tool
+#### Programming the Controller
 
 The controller talks to its programming software over CAN using the CANopen standard. All I needed to do was change the battery voltage settings and tune the throttle, and paying $1,000 for software to do that felt kind of preposterous. I thought (naively, it turns out) that if everything is over CAN, I could just build a tool for it myself.
 
-I read up on CANopen, worked out what each message from the Curtis controller was saying, and with help from some AI tools I wrote a Python app that could read a bunch of values off the controller. That actually gave me real visibility into the problem. I could read every status flag and see that the contactor wasn't closed and that the capacitor voltage was way lower than the battery voltage, all because it wasn't precharging.
+I read up on CANopen, worked out what each message from the Curtis controller was saying, and with help from some AI tools I wrote a Python app that could read a bunch of values off the controller. It worked! Sort of. I could read every status flag and see a couple different inputs like voltage. 
 
 I thought I was SO close! But every time I tried to change a value, the controller would flag it and basically say that the request came from a weird place and it wasn't going to let me change that. The parameters I needed were locked behind Curtis's own tools. That one took me a while and was honestly a bit painful, because I really wanted to save my client the money.
 
 #### Buying the Software
 
-That left buying the official programming software, which runs anywhere from $500 to $1,000. I bought the $500 option, and I was very sure it would work. It didn't. That was a harsh lesson. I was able to return it for a full refund, but first I had to go to my client and tell him I'd ordered the wrong software.
+That left buying the official programming software, which runs anywhere from $500 to $1,000. I bought the $500 option, and I was very sure it would work. It didn't, it was for the wrong model (ouch again). I was able to return it for a full refund, but first I had to go to my client and tell him I'd ordered the wrong software.
 
-It's always good to have a little practice in humility. I explained where I messed up, why I made the decision I did, and what I was going to do to fix it. Thankfully the next software we bought did work, although at $1,000 it really hurt.
-
-With the right software the problem was pretty obvious. The battery voltage levels in the controller were set too high for my application from the factory, so it thought the pack was undervoltage and refused to precharge. Once I reset all of that, things got a lot smoother.
-
-![Curtis Integrated Toolkit screenshot](assets/img/isetta/scrn.png)
-*Screenshot of the Curtis Integrated Toolkit Software after fixing the voltage level issue (contactor was not connected).*
+It's always good to have a little practice in humility. I explained where I messed up, why I made the decision I did, and what I was going to do to fix it. Thankfully the next software we bought did work, although at $1,000 it was pricey. 
 
 #### First Spin
 
-With the motor and battery wired to the controller, I got the motor spinning pretty easily! The main thing I had to tune was the offset between the motor's encoder and where the rotor actually was. Once I dialed that in, it was running just fine, which was fantastic.
+With the motor and battery wired to the controller, I got the motor spinning pretty easily now that I had the right tool! The main thing I had to tune was the offset between the motor's encoder and where the rotor actually was. Once I dialed that in, it was running just fine, which was fantastic. However, I did have a spooky moment where I performed the calibration wrong and it started drawing 500 amps while spinning slowly. Watching 2AWG cables jump from current makes you think twice. I quickly stopped the run.
 
 **Note: This was an update video I made for the owner of the vehicle.**
 ![Motor spin test](assets/img/isetta/first-spin.mp4)
@@ -128,6 +120,9 @@ Next up were my challenges with the charger, which randomly cuts off at 38°C. I
 *Status snippet from the Thunderstruck MCU during a charge session when the cutoff happens.*
 
 I've been working through it pretty methodically, charging at different voltages and different currents, with the cooling fan on and with it off, and watching every status flag I can. It fails the exact same way every time. I haven't solved it yet, and I'm in talks with the manufacturer to get it sorted out.
+
+**UPDATE 11/2/2026**
+The mystery is solved! I was grounding the charger through it's metal case with a ground strap. The fix was running a ground straight from the AC plugs input ground to my BMS ground. I don't quite know why the fault was temperature related but it may have had to due with the changing electrical properties of the metal case with temperature. 
 
 ### What's Next
 

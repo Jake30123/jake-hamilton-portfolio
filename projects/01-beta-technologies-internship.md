@@ -20,7 +20,7 @@ My full-time internship at BETA Technologies was only about 11 weeks, but it was
 
 ### First Impressions
 
-On my first day we got a tour of the facilities, and I just remember being blown away by the scale and complexity of the motors and batteries. I'd built battery systems for my own projects before, but working alongside engineers on an electric aircraft program gave me a much deeper respect for the engineering challenges get at aerospace scale.
+On my first day we got a tour of the facilities, and I just remember being blown away by the scale and complexity of the motors and batteries. I'd built battery systems for my own projects before, but working alongside engineers on an electric aircraft program gave me a much deeper respect for the engineering challenges at aerospace scale.
 
 From the start, it was incredibly clear that everyone at BETA believed in the mission of sustainable and safe aviation. And, they were all huge nerds about airplanes!
 
